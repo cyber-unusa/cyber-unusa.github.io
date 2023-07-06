@@ -1,4 +1,5 @@
 import { Navbar } from "../UI/Navbar"
+import { Link } from 'react-router-dom'
 
 export const About=()=>{
     return (
