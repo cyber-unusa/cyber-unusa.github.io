@@ -1,12 +1,6 @@
 import React from 'react'
 import { Navbar } from '../UI/Navbar'
-import ukm from '../assets/img/ukm.png'
-import abs from '../assets/img/abs.png'
-import abs1 from '../assets/img/abs1.png'
-import abs3 from '../assets/img/abs3.png'
 import galeh from '../assets/img/gal.JPG'
-import rizqi from '../assets/img/riz.jpg'
-import yuli from '../assets/img/yul.jpg'
 import Footer from '../UI/Footer'
 
 const Home = () => {
@@ -41,9 +35,9 @@ const Home = () => {
                     </div>
                     <div className='w-full self-end px-4 lg:w-1/2'>
                         <div className='mt-10 relative'>
-                            <img src={ukm} alt="ukm cyber" className='max-w-full mx-auto' />
+                            <img src="asset/people/ukm.png" alt="ukm cyber" className='max-w-full mx-auto' />
                             <span className='absolute -bottom-16 -z-10 left-1/2 -translate-x-1/2 w-10/12 lg:w-10/12'>
-                                <img src={abs} alt="ukm cyber"/> 
+                                <img src="asset/vector/v0.png" alt="ukm cyber"/> 
                             </span>
                         </div>
                     </div>
@@ -55,7 +49,7 @@ const Home = () => {
         <section id='pengurus' className='pt-36 pb-32'>
             <div className="bg-secbg lg:py-16">
                 <div className="container relative">
-                    <img src={abs1} alt="abstract" className='absolute -top-28 -left-16 w-28 hidden lg:block'/>
+                    <img src="asset/vector/v1.png" alt="abstract" className='absolute -top-28 -left-16 w-28 hidden lg:block'/>
                     <div className="flex flex-wrap lg:justify-around">
                         <div className="w-full my-8 px-4 mb-10 lg:w-1/3">
                             <h2 className='text-xl lg:text-3xl font-bold text-primary mb-4'>PENGURUS INTI</h2>
@@ -64,15 +58,15 @@ const Home = () => {
                         </div>
                         <div className="flex flex-wrap space-x-6 justify-around lg:justify-end w-full px-4 my-4 lg:w-1/2">
                             <div className="imgpeng">
-                                <img src={galeh} alt="" className='w-32 lg:h-36 lg:w-44 rounded-tr-3xl rounded-bl-3xl' />
+                                <img src="/asset/people/leh.jpg" alt="" className='w-32 lg:h-36 lg:w-44 rounded-tr-3xl rounded-bl-3xl' />
                                 <h4 className='font-semibold bg-lowprim my-2 text-white p-2 rounded rounded-tr-3xl shadow-sm'>Galeh<span className='block'>Ketua</span></h4>
                             </div>
                             <div className="imgpeng">
-                                <img src={yuli} alt="" className='w-32 lg:h-36 lg:w-44 rounded-tr-3xl rounded-bl-3xl' />
+                                <img src="/asset/people/yul.jpg" alt="" className='w-32 lg:h-36 lg:w-44 rounded-tr-3xl rounded-bl-3xl' />
                                 <h4 className='font-semibold bg-lowprim my-2 text-white p-2 rounded rounded-tr-3xl shadow-sm'>Yuliana<span className='block'>Sekretaris</span></h4>
                             </div>
                             <div className="imgpeng">
-                                <img src={rizqi} alt="" className='w-32 lg:h-36 lg:w-44 rounded-tr-3xl rounded-bl-3xl' />
+                                <img src="/asset/people/riz.jpg" alt="" className='w-32 lg:h-36 lg:w-44 rounded-tr-3xl rounded-bl-3xl' />
                                 <h4 className='font-semibold bg-lowprim my-2 text-white p-2 rounded rounded-tr-3xl shadow-sm'>Rizqi PNB. S.T., M.T<span className='block'>Pembina</span></h4>
                             </div>
                         </div>
@@ -86,12 +80,12 @@ const Home = () => {
             <h2 className='text-3xl lg:text-2xl font-bold text-center mb-16 text-yel'>KEGIATAN UKM CYBER</h2>
             
             <div className="container mx-auto px-6 flex flex-wrap gap-6 justify-center relative">
-            <img src={abs3} alt="decoration" className='absolute right-1 -top-44 w-60 hidden lg:block '/>
+            <img src="asset/vector/v2.png" alt="decoration" className='absolute right-1 -top-44 w-60 hidden lg:block '/>
                 <div className="rounded-lg shadow-lg overflow-hidden mb-10 lg:w-72">
                     <img src={galeh} alt="banner" className='w-full'/>
                     <div className='py-6 px-4'>
-                        <div className="font-semibold text-xl">Tanggal :</div>
-                        <div className="font-semibold text-xl">Tempat : </div>
+                        <div className="font-semibold text-xl">Nama Kegiatan</div>
+                        <div className="font-semibold text-xl">Tanggal : </div>
                         <div className="font-semibold text-xl text-end">
                             <p className='font-normal text-sm mb-4 text-left'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id, tenetur?</p>
                             <a href="#" className='py-1 px-1 text-base font-bold rounded-lg text-white bg-lowprim hover:shadow-lg hover:opacity-90 transition duration-300 ease-in-out text-right'>Cooming soon...</a>
@@ -101,8 +95,8 @@ const Home = () => {
                 <div className="rounded-lg shadow-lg overflow-hidden mb-10 lg:w-72">
                     <img src={galeh} alt="banner" className='w-full'/>
                     <div className='py-6 px-4'>
-                        <div className="font-semibold text-xl">Tanggal :</div>
-                        <div className="font-semibold text-xl">Tempat : </div>
+                        <div className="font-semibold text-xl">Nama Kegiatan</div>
+                        <div className="font-semibold text-xl">Tanggal : </div>
                         <div className="font-semibold text-xl text-end">
                             <p className='font-normal text-sm mb-4 text-left'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id, tenetur?</p>
                             <a href="#" className='py-1 px-1 text-base font-bold rounded-lg text-white bg-lowprim hover:shadow-lg hover:opacity-90 transition duration-300 ease-in-out text-right'>Cooming soon...</a>
@@ -112,8 +106,8 @@ const Home = () => {
                 <div className="rounded-lg shadow-lg overflow-hidden mb-10 lg:w-72">
                     <img src={galeh} alt="banner" className='w-full'/>
                     <div className='py-6 px-4'>
-                        <div className="font-semibold text-xl">Tanggal :</div>
-                        <div className="font-semibold text-xl">Tempat : </div>
+                        <div className="font-semibold text-xl">Nama Kegiatan</div>
+                        <div className="font-semibold text-xl">Tanggal : </div>
                         <div className="font-semibold text-xl text-end">
                             <p className='font-normal text-sm mb-4 text-left'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id, tenetur?</p>
                             <a href="#" className='py-1 px-1 text-base font-bold rounded-lg text-white bg-lowprim hover:shadow-lg hover:opacity-90 transition duration-300 ease-in-out text-right'>Cooming soon...</a>
@@ -139,7 +133,7 @@ const Home = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="rounded-lg shadow-sm mb-10 bg-white overflow-hidden w-80 lg:w-72">
+                    <div className="rounded-lg shadow-md mb-10 bg-white overflow-hidden w-80 lg:w-72">
                         <img src={galeh} alt="dokumentasi" className='w-full' />
                         <div className="py-6 px-4">
                             <h3 className='font-semibold text-xl mb-2'>Bukber guys</h3>
@@ -159,7 +153,7 @@ const Home = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="rounded-lg shadow-sm mb-10 bg-white overflow-hidden w-80 lg:w-72">
+                    <div className="rounded-lg shadow-md mb-10 bg-white overflow-hidden w-80 lg:w-72">
                         <img src={galeh} alt="dokumentasi" className='w-full' />
                         <div className="py-6 px-4">
                             <h3 className='font-semibold text-xl mb-2'>Bukber guys</h3>
@@ -179,7 +173,7 @@ const Home = () => {
 
             <div className="container">
                 <div className="lg:w-96 text-center px-4 mx-auto">
-                    <h3>Anda dapat bekerja sama dengan UKM CYBER UNUSA dengan menghubungi sosial media dibawah ini:</h3>
+                    <h3>Anda dapat bekerja sama dengan <span className='font-bold'>UKM CYBER UNUSA</span> dengan menghubungi sosial media kami dibawah ini:</h3>
                     <div className="flex items-center">
                         {/* Youtube */}
                         <a href="https://www.youtube.com/channel/UC7YBQJ7wAoXW_W5VtouTLyA" target='_blank' className='mt-16 w-20 h-20 mr-3  flex rounded-full justify-center items-center border border-slate-300 hover:border-lowprim text-red-600 hover:bg-lowprim hover:text-white'>

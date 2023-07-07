@@ -17,20 +17,20 @@ const Member = () => {
             <div className='w-full self-center px-4 py-8 mx-auto lg:w-1/3'>
                 <div className='flex flex-wrap mx-auto justify-between '>
                   <div className='mb-4'>
-                    <img src="/asset/nan.jpg" alt="kadiv" className='rounded-full w-28 mx-4 border border-secbg shadow-md'/>
+                    <img src="/asset/people/nan.jpg" alt="kadiv" className='rounded-full w-28 mx-4 border border-secbg shadow-md'/>
                     <h4 className='font-semibold bg-lowprim my-2 text-white p-2 rounded rounded-tr-3xl shadow-sm'>Nanda<span className='block'>Cyber Belajar</span></h4>
                   </div>
                   <div>
-                    <img src="/asset/nan.jpg" alt="kadiv" className='rounded-full w-28 mx-4 shadow-md'/>
+                    <img src="/asset/people/dur.jpg" alt="kadiv" className='rounded-full w-28 mx-4 shadow-md'/>
                     <h4 className='font-semibold bg-lowprim my-2 text-white p-2 rounded rounded-tr-3xl shadow-sm'>Abdur<span className='block'>Cyber Mengajar</span></h4>
                   </div>
                   <div>
-                    <img src="/asset/nan.jpg" alt="kadiv" className='rounded-full w-28 mx-4'/>
+                    <img src="/asset/people/dja.jpg" alt="kadiv" className='rounded-full w-28 mx-4'/>
                     <h4 className='font-semibold bg-lowprim my-2 text-white p-2 rounded rounded-tr-3xl shadow-sm'>Nadja<span className='block'>Cyber Berbagi</span></h4>
                   </div>
                   <div>
-                    <img src="/asset/nan.jpg" alt="kadiv" className='rounded-full w-28 mx-4'/>
-                    <h4 className='font-semibold bg-lowprim my-2 text-white p-2 rounded rounded-tr-3xl shadow-sm'>Yulianto<span className='block'>Cyber Event</span></h4>
+                    <img src="/asset/people/yan.jpg" alt="kadiv" className='rounded-full w-28 mx-4'/>
+                    <h4 className='font-semibold bg-lowprim my-2 text-white p-2 rounded rounded-tr-3xl shadow-sm'>Rian<span className='block'>Cyber Event</span></h4>
                   </div>
                 </div>
             </div>

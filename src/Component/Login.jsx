@@ -6,8 +6,8 @@ const Login = () => {
       <div className="container relative">
         <div className="w-80 shadow-xl mx-auto rounded-md mt-16 lg:mt-4 lg:w-96 ">
             <img src="/asset/logo.png" alt="p" className='mx-auto w-36 mt-16' />
-            <img src="/asset/v3.png" alt="vector" className='hidden lg:block absolute -top-24 right-0 w-[560px]' />
-            <img src="/asset/v4.png" alt="vector" className='hidden lg:block absolute -bottom-[93px] left-0 w-72' />
+            <img src="/asset/vector/v3.png" alt="vector" className='hidden lg:block absolute -top-24 right-0 w-[560px]' />
+            <img src="/asset/vector/v4.png" alt="vector" className='hidden lg:block absolute -bottom-[93px] left-0 w-72' />
             <form action="post">
                 <div className='p-4'>
                     <label htmlFor="uname" className='block text-gray-700 font-bold mb-1'>NIM: </label>
