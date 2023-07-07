@@ -27,6 +27,7 @@ export  const Navbar =()=>{
             {
               links.map((link)=>(
                 <li key={link.name} className='md:ml-6 text-lg font-semibold md:my-0 my-7'>
+                  {/* Kedepannya silahkan perbaiki dengan menggunakan Link bukan href agar performa lebih oke */}
                   <a href={link.link} className='text-gray-800 hover:text-gray-400 duration-500' >{link.name}</a>
                 </li>
               ))
