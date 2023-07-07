@@ -1,5 +1,6 @@
 import React,{useState} from 'react'
 import cyber from '../assets/img/cyber-logo.png'
+import { Link } from 'react-router-dom'
 
 export  const Navbar =()=>{
 
@@ -32,9 +33,9 @@ export  const Navbar =()=>{
                 </li>
               ))
             }
-            <button className="px-3 py-2 md:ml-6 font-semibold bg-[#13A085] text-white rounded-md hover:shadow-lg hover:opacity-90 transition duration-300 ease-in-out">
+            <Link to='/login' ><button className="px-3 py-2 md:ml-6 font-semibold bg-[#13A085] text-white rounded-md hover:shadow-lg hover:opacity-90 transition duration-300 ease-in-out">
                 LOGIN
-            </button>
+            </button></Link>
           </ul>
         </div>
       </div>
