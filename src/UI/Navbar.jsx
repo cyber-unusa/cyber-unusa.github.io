@@ -2,50 +2,40 @@ import React,{useState} from 'react'
 import cyber from '../assets/img/cyber-logo.png'
 
 export  const Navbar =()=>{
-  const[show,setShow]=useState(true);
 
-    const handleNavCollapse = () => {
+    let links = [
+      {name:"HOME", link:"/"},
+      {name:"ABOUT", link:"/about"},
+      {name:"SERVICES", link:"/service"},
+      {name:"MEMBER", link:"/member"},
+    ]
 
-    }
+    let [open, setOpen] = useState(false)
 
     return (
-      <>
-        {/* <header className="bg-transparent absolute top-0 left-0 w-full flex items-center z-10">
-          <div className="container">
-            <div className="flex items-center justify-between relative">
-              <div className="px-4">
-                <a href="#"><img src={cyber} alt="cyber" className='py-6 block' /></a>
-              </div>
-              <div className="flex items-center px-4">
-                <button id='humberger' name='humberger' type='button' className='block absolute right-4' data-toggle="collapse" data-target="#navbarsExample09" aria-controls="navbarsExample09" aria-expanded={`!isNavCollapsed ? true : false`} aria-label="Toggle navigation" onClick={handleNavCollapse}>
-                  <span className='humberger'></span>
-                  <span className='humberger'></span>
-                  <span className='humberger'></span>
-                </button>
-              </div>
-            </div>
+      <div className="shadow-md w-full fixed top-0 left-0 z-20">
+        <div className="md:flex items-center justify-between bg-white py-1 md:px-10 px-7">
+          <div className="font-bold text-2xl cursor-pointer flex items-center">
+            <img src={cyber} alt="logo" className='w-16 pl-2'/>
           </div>
-        </header> */}
-        <nav className="bg-white px-[25px] pt-[5px]">
-          <div className="container flex items-center justify-between pr-25 px-30">
-            <div className="flex items-center">
-              <img
-                src={cyber}
-                alt=""
-                className="w-[75px] h-[75px] mr-2"
-              />
-            </div>
-            <div className="flex space-x-3">
-              <span className="py-2 px-3 font-bold">HOME</span>
-              <span className="py-2 px-3 font-bold">ABOUT</span>
-              <span className="py-2 px-3 font-bold">MEMBER</span>
-              <span className="py-2 px-3 font-bold">SERVICES</span>
-              <button className="px-3 py-2 bg-[#13A085] text-white rounded-md">
+          <div className='text-3xl absolute right-8 top-6 cursor-pointer md:hidden' onClick={()=>setOpen(!open)}>
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6" name={open ? 'close' : 'menu'} >
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+            </svg>
+          </div>
+          <ul className={`md:flex md:items-center md:pb-0 pb-12 absolute md:static bg-white md:z-auto z-[-1] left-0 w-full md:w-auto md:pl-0 pl-9 transition-all duration-500 ease-in ${open ? 'top-16' : 'top-[-490px]'} `}>
+            {
+              links.map((link)=>(
+                <li key={link.name} className='md:ml-6 text-lg font-semibold md:my-0 my-7'>
+                  <a href={link.link} className='text-gray-800 hover:text-gray-400 duration-500' >{link.name}</a>
+                </li>
+              ))
+            }
+            <button className="px-3 py-2 md:ml-6 font-semibold bg-[#13A085] text-white rounded-md hover:shadow-lg hover:opacity-90 transition duration-300 ease-in-out">
                 LOGIN
-              </button>
-            </div>
-          </div>
-        </nav>
-      </>
+            </button>
+          </ul>
+        </div>
+      </div>
     );
 }

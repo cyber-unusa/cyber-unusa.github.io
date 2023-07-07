@@ -7,6 +7,7 @@ import abs3 from '../assets/img/abs3.png'
 import galeh from '../assets/img/gal.JPG'
 import rizqi from '../assets/img/riz.jpg'
 import yuli from '../assets/img/yul.jpg'
+import Footer from '../UI/Footer'
 
 const Home = () => {
 
@@ -28,7 +29,7 @@ const Home = () => {
         <Navbar />
 
         {/* Hero section */}
-        <section id='home' className='pt-2'>
+        <section id='home' className='pt-2 mt-24 lg:mt-14'>
             <div className="container">
                 <div className='flex flex-wrap flex-row-reverse'>
                     <div className="w-full self-center px-4 lg:w-1/2">
@@ -128,7 +129,7 @@ const Home = () => {
                 <h2 className='text-3xl lg:text-2xl font-bold text-center mb-16 text-primary pt-8'>DOKUMENTER</h2>
                 
                 <div className="container px-6 mx-auto flex flex-wrap gap-8 justify-center">
-                    <div className="rounded-lg shadow-md mb-10 bg-white overflow-hidden w-48 lg:w-72">
+                    <div className="rounded-lg shadow-md mb-10 bg-white overflow-hidden w-80 lg:w-72">
                         <img src={galeh} alt="dokumentasi" className='w-full' />
                         <div className="py-6 px-4">
                             <h3 className='font-semibold text-xl mb-2'>Bukber guys</h3>
@@ -138,7 +139,7 @@ const Home = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="rounded-lg shadow-sm mb-10 bg-white overflow-hidden w-48 lg:w-72">
+                    <div className="rounded-lg shadow-sm mb-10 bg-white overflow-hidden w-80 lg:w-72">
                         <img src={galeh} alt="dokumentasi" className='w-full' />
                         <div className="py-6 px-4">
                             <h3 className='font-semibold text-xl mb-2'>Bukber guys</h3>
@@ -148,7 +149,7 @@ const Home = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="rounded-lg shadow-md mb-10 bg-white overflow-hidden w-48 lg:w-72">
+                    <div className="rounded-lg shadow-md mb-10 bg-white overflow-hidden w-80 lg:w-72">
                         <img src={galeh} alt="dokumentasi" className='w-full' />
                         <div className="py-6 px-4">
                             <h3 className='font-semibold text-xl mb-2'>Bukber guys</h3>
@@ -158,7 +159,7 @@ const Home = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="rounded-lg shadow-sm mb-10 bg-white overflow-hidden w-48 lg:w-72">
+                    <div className="rounded-lg shadow-sm mb-10 bg-white overflow-hidden w-80 lg:w-72">
                         <img src={galeh} alt="dokumentasi" className='w-full' />
                         <div className="py-6 px-4">
                             <h3 className='font-semibold text-xl mb-2'>Bukber guys</h3>
@@ -203,6 +204,8 @@ const Home = () => {
                 </div>
             </div>
         </section>
+
+        <Footer />
     </div>
   )
 }
