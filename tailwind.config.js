@@ -4,10 +4,11 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        primary: '#13A085',
-        lowprim: '#26B99A',
-        secbg: '#F4F4F4',
-        yel: '#FFCD00',
+        primary: "#13A085",
+        lowprim: "#26B99A",
+        secbg: "#F9F9F9",
+        yel: "#FFCD00",
+        yellow: "#FFDA44",
       },
       fontFamily: {
         rubik: "Rubik",

@@ -144,42 +144,42 @@ export const Services=()=>{
         </section>
 
         <section id="Konsultasi" className="bg-secbg">
-          <div className="container flex flex-col md:flex-row p-12">
-            <div className="item1 basis-2/4 md:basis-1/2 md:pt-0 lg:basis-1/2 relative pt-24">
-              <h1 className="text-primary font-extrabold text-3xl max-sm:text-xl md:text-2xl">
+          <div className="container flex flex-col md:flex-row p-12 lg:p-20">
+            <div className="item1 basis-2/4 md:basis-1/2 md:pt-0 lg:basis-1/2 relative pt-24 ">
+              <h1 className="text-primary font-extrabold lg:text-3xl max-sm:text-xl md:text-2xl">
                 Kami sudah membantu beberapa
               </h1>
-              <h1 className="text-primary font-extrabold text-3xl max-sm:text-xl md:text-2xl">
+              <h1 className="text-primary font-extrabold lg:text-3xl max-sm:text-xl md:text-2xl">
                 Orang untuk naik level. Kamu kapan?
               </h1>
-              <h1 className="font-extrabold text-4xl max-sm:text-xl  bg-primary md:w-2/4 max-sm:w-2/4 lg:w-40 p-2  text-white rounded-md mt-4 md:text-2xl">
+              <h1 className="font-extrabold lg:text-4xl max-sm:text-xl  bg-primary md:w-2/4 max-sm:w-2/4 lg:w-56 p-2  text-white rounded-md mt-4 md:text-2xl">
                 #DIGITALIN <span className="block">AJA</span>
               </h1>
-              <span className="absolute z-10 lg:-top-24 lg:right-48 max-sm:-top-4 max-sm:left-[18rem] max-sm:w-32 md:-top-20 md:right-0">
+              <span className="absolute z-10 lg:-top-24 lg:right-24 max-sm:-top-4 max-sm:left-[18rem] max-sm:w-32 md:-top-20 md:right-0">
                 {icons1()}
               </span>
               <div className="absolute z-10 lg:bottom-56 lg:right-36  max-sm:-bottom-24 max-sm:right-16 md:-right-4 md:bottom-72">
                 {rocket()}
               </div>
-              <div className="absolute z-10 lg:bottom-32 lg:-left-8 max-sm:-bottom-36 max-sm:-left-8 md:bottom-52 md:-left-8">
+              <div className="absolute z-10 lg:bottom-32 lg:-left-16 max-sm:-bottom-36 max-sm:-left-8 md:bottom-52 md:-left-8">
                 {codesBracket()}
               </div>
             </div>
             <div className="item2 basis-2/4 md:basis-1/2 lg:basis-1/2 max-sm:pt-44 md:ml-8">
               <div className="headTitle flex">
                 <div className="contens1 max-sm:m-auto">
-                  <h1 className="text-primary font-extrabold text-3xl max-sm:text-2xl  md:text-xl">
+                  <h1 className="text-primary font-extrabold lg:text-3xl max-sm:text-2xl  md:text-xl">
                     Yuk Konsultasi <span className="block">Sekarang Juga</span>
                   </h1>
                 </div>
                 <div className="contens2 pl-4 items-center pt-1">
-                  <h1 className="text-white font-extrabold rounded-md text-4xl bg-primary p-3 md:text-2xl">
+                  <h1 className="text-white font-extrabold rounded-md lg:text-4xl bg-primary p-3 md:text-2xl">
                     GRATIS
                   </h1>
                 </div>
               </div>
               <div className="formulir mt-16 max-sm:text-center max-sm:m-auto max-sm:mt-20">
-                <p className="text-center text-primary font-bold">
+                <p className="lg:text-start md:text-center text-primary font-bold">
                   Isi formulir dibawah ini agar kami bisa membantu anda
                 </p>
                 <form action="" className="pt-8">
@@ -188,16 +188,16 @@ export const Services=()=>{
                       <span className="block text-primary font-bold">Nama</span>
                       <input
                         type="text"
-                        className="bg-primary w-3/5 rounded-md"
+                        className="bg-primary w-3/5 rounded-md p-2 text-white"
                       />
                     </div>
                     <div id="email" className="basis-2/4">
-                      <span className="block text-primary font-bold">
+                      <span className="block text-primary font-bold ">
                         Email
                       </span>
                       <input
                         type="text"
-                        className="bg-primary w-3/5 rounded-md"
+                        className="bg-primary w-3/5 rounded-md p-2 text-white"
                       />
                     </div>
                   </div>
