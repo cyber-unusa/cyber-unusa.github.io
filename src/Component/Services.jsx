@@ -165,7 +165,7 @@ export const Services=()=>{
                 {codesBracket()}
               </div>
             </div>
-            <div className="item2 basis-2/4 md:basis-1/2 lg:basis-1/2 max-sm:pt-44 md:ml-8">
+            <div className="item2 basis-2/4 md:basis-1/2 lg:basis-1/2 max-sm:pt-44 md:ml-8 lg:pl-32">
               <div className="headTitle flex">
                 <div className="contens1 max-sm:m-auto">
                   <h1 className="text-primary font-extrabold lg:text-3xl max-sm:text-2xl  md:text-xl">
