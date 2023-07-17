@@ -6,7 +6,7 @@ export const Services=()=>{
       <>
         <Navbar />
         <section id="head" className="">
-          <div className="container px-4 md:px-8 lg:px-16 pb-12 flex flex-col md:flex-row">
+          <div className="container px-4 lg:px-16 pb-12 flex flex-col lg:flex-row">
             <div className="contens md:w-1/2 lg:w-2/4 pt-10 md:pt-20 lg:pt-36">
               <h1 className="text-2xl md:text-4xl lg:text-5xl font-bold text-primary">
                 PERLU
@@ -29,7 +29,7 @@ export const Services=()=>{
             </div>
             <div className="contens-img md:w-1/2 lg:w-2/4 md:mt-12 lg:mt-4">
               <img
-                src="/asset/services-img.jpg"
+                src="/asset/services-img.png"
                 alt=""
                 className="w-full h-auto object-cover"
               />
@@ -60,19 +60,19 @@ export const Services=()=>{
         </section>
 
         <section id="WhatWeDo?">
-          <div className="container text-center py-12 px-4">
+          <div className="container text-center py-8 px-4">
             <h1 className="text-xl lg:text-3xl font-bold text-primary">
               WHAT WE DO?
             </h1>
-            <div className="container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-20">
+            <div className="container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-20 ">
               <div
                 id="webDeveloper"
-                className="basis-3/4 shadow-lg mx-2 md:mx-4 lg:mx-8 mt-8"
+                className="basis-3/4 rounded-md shadow-lg mx-2 lg:mx-8 mt-2 lg:mt h-[400px]"
               >
                 <div className="images">
                   <span>{webDev()}</span>
                 </div>
-                <div className="contens text-white bg-primary py-4 px-4 h-[300px] rounded-b-lg mt-4">
+                <div className="contens text-white bg-primary py-4 px-4 h-[200px] rounded-b-lg mt-4">
                   <h2 className="font-extrabold text-2xl">Web Developer</h2>
                   <p className="font-bold text-sm pt-4">
                     Bikin bisnismu ataupun apapun yang kamu inginkan menjadi
@@ -82,12 +82,12 @@ export const Services=()=>{
               </div>
               <div
                 id="uiUx"
-                className="basis-3/4 shadow-lg mx-2 md:mx-4 lg:mx-8 mt-8"
+                className="basis-3/4 rounded-md shadow-lg mx-2 lg:mx-8 mt-2 lg:mt h-[400px]"
               >
                 <div className="images">
                   <span>{uiux()}</span>
                 </div>
-                <div className="contens text-white bg-primary py-4 px-4 h-[300px] rounded-b-lg mt-4">
+                <div className="contens text-white bg-primary py-4 px-4 h-[200px] rounded-b-lg mt-4">
                   <h2 className="font-extrabold text-2xl">UI/UX Desain</h2>
                   <p className="font-bold text-sm pt-4">
                     Perbagus tampilanmu yuk agar orang-orang betah
@@ -96,12 +96,12 @@ export const Services=()=>{
               </div>
               <div
                 id="rakitPc"
-                className="basis-3/4 shadow-lg mx-2 md:mx-4 lg:mx-8 mt-8"
+                className="basis-3/4 rounded-md shadow-lg mx-2 lg:mx-8 mt-2 lg:mt h-[400px]"
               >
                 <div className="images">
                   <span>{rakitPc()}</span>
                 </div>
-                <div className="contens text-white bg-primary py-4 px-4 h-[300px] rounded-b-lg mt-4">
+                <div className="contens text-white bg-primary py-4 px-4 h-[200px] rounded-b-lg mt-4">
                   <h2 className="font-extrabold text-2xl">Rakit PC</h2>
                   <p className="font-bold pt-4 text-sm">
                     Bingung mau beli komputer dan laptop. Titip kami aja , nanti
@@ -111,12 +111,12 @@ export const Services=()=>{
               </div>
               <div
                 id="webDeveloper"
-                className="basis-3/4 shadow-lg mx-2 md:mx-4 lg:mx-8 mt-8"
+                className="basis-3/4 rounded-md shadow-lg mx-2 lg:mx-8 mt-2 lg:mt h-[400px]"
               >
                 <div className="images">
                   <span>{fastWorking()}</span>
                 </div>
-                <div className="contens text-white bg-primary py-4 px-4 h-[300px] rounded-b-lg mt-4">
+                <div className="contens text-white bg-primary py-4 px-4 h-[200px] rounded-b-lg mt-4">
                   <h2 className="font-extrabold text-2xl">Instalasi Laptop</h2>
                   <p className="font-bold pt-4 text-sm">
                     Bingung mau instal ulang windows, aplikasi lain dan
@@ -126,12 +126,12 @@ export const Services=()=>{
               </div>
               <div
                 id="webDeveloper"
-                className="basis-3/4 shadow-lg mx-2 md:mx-4 lg:mx-8 mt-8"
+                className="basis-3/4 rounded-md shadow-lg mx-2 lg:mx-8 mt-2 lg:mt h-[400px]"
               >
                 <div className="images">
                   <span>{undangan()}</span>
                 </div>
-                <div className="contens text-white bg-primary py-4 px-4 h-[300px] rounded-b-lg mt-4">
+                <div className="contens text-white bg-primary py-4 px-4 h-[200px] rounded-b-lg mt-4">
                   <h2 className="font-extrabold text-2xl">Undangan Digital</h2>
                   <p className="font-bold pt-4 text-sm">
                     Gak perlu pusing bikin undangan lagi!!. Digitalin aja
@@ -143,7 +143,7 @@ export const Services=()=>{
           </div>
         </section>
 
-        <section id="Konsultasi" className="bg-secbg">
+        <section id="Konsultasi" className="bg-secbg overflow-hidden lg:mt-28">
           <div className="container flex flex-col md:flex-row p-12 lg:p-20">
             <div className="item1 basis-2/4 md:basis-1/2 md:pt-0 lg:basis-1/2 relative pt-24 ">
               <h1 className="text-primary font-extrabold lg:text-3xl max-sm:text-xl md:text-2xl">
@@ -155,7 +155,7 @@ export const Services=()=>{
               <h1 className="font-extrabold lg:text-4xl max-sm:text-xl  bg-primary md:w-2/4 max-sm:w-2/4 lg:w-56 p-2  text-white rounded-md mt-4 md:text-2xl">
                 #DIGITALIN <span className="block">AJA</span>
               </h1>
-              <span className="absolute z-10 lg:-top-24 lg:right-24 max-sm:-top-4 max-sm:left-[18rem] max-sm:w-32 md:-top-20 md:right-0">
+              <span className="absolute z-10 lg:-top-24 lg:right-24 max-sm:-top-4 max-sm:left-[18rem] max-sm:w-32 md:-top-20 md:right-0 lg:w-36">
                 {icons1()}
               </span>
               <div className="absolute z-10 lg:bottom-56 lg:right-36  max-sm:-bottom-24 max-sm:right-16 md:-right-4 md:bottom-72">

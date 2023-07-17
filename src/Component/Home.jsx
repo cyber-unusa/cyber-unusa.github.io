@@ -1,21 +1,27 @@
-import React from 'react'
+import React, { useRef } from 'react'
 import { Navbar } from '../UI/Navbar'
-import galeh from '../assets/img/gal.JPG'
 import Footer from '../UI/Footer'
 
 const Home = () => {
 
+    const ref = useRef(null)
+
+    const handleClick = () => {
+        ref.current?.scrollIntoView({behavior: 'smooth'});
+    };
+
     const copas = () => {
         const textToCopy = "cyber@unusa.ac.id";
-      const tempTextArea = document.createElement('textarea');
-      tempTextArea.value = textToCopy;
-      document.body.appendChild(tempTextArea);
-      tempTextArea.select();
-      tempTextArea.setSelectionRange(0, 99999); 
-      document.execCommand('copy');
-      document.body.removeChild(tempTextArea);
-      alert("berhasil di salin")
+        const tempTextArea = document.createElement('textarea');
+        tempTextArea.value = textToCopy;
+        document.body.appendChild(tempTextArea);
+        tempTextArea.select();
+        tempTextArea.setSelectionRange(0, 99999); 
+        document.execCommand('copy');
+        document.body.removeChild(tempTextArea);
+        alert("berhasil di salin")
     }
+
 
   return (
     <div>
@@ -31,7 +37,7 @@ const Home = () => {
                         <h2 className='font-semibold text-lowprim mb-5 text-md'>UNIVERSITAS NAHDLATUL ULAMA SURABAYA</h2>
                         <p className='font-base lg:text-md mb-10'>UKM CYBER merupakan sebuah wadah bagi mahasiswa UNUSA untuk mempelajari tentang dunia teknologi baik itu web developer, jaringan komputer, AR/VR, dan masih banyak lagi. wadah ini digunakan untuk mempersiapkan lulusan-lulusan yang tentunya siap kerja dan tidak ketinggalan zaman.</p>
 
-                        <a href="#" className='py-3 px-4 text-base font-bold rounded-lg text-white bg-lowprim hover:shadow-lg hover:opacity-90 transition duration-300 ease-in-out'>Read More</a>
+                        <button onClick={handleClick} className='py-3 px-4 text-base font-bold rounded-lg text-white bg-lowprim hover:shadow-lg hover:opacity-90 transition duration-300 ease-in-out'>Read More</button>
                     </div>
                     <div className='w-full self-end px-4 lg:w-1/2'>
                         <div className='mt-10 relative'>
@@ -47,26 +53,30 @@ const Home = () => {
 
         {/* Pengurus Inti */}
         <section id='pengurus' className='pt-36 pb-32'>
-            <div className="bg-secbg lg:py-16">
+            <div className="bg-secbg lg:py-16" ref={ref}>
                 <div className="container relative">
                     <img src="asset/vector/v1.png" alt="abstract" className='absolute -top-28 -left-16 w-28 hidden lg:block'/>
                     <div className="flex flex-wrap lg:justify-around">
-                        <div className="w-full my-8 px-4 mb-10 lg:w-1/3">
+                        <div className="w-full my-36 px-8 mb-10 lg:w-1/3">
                             <h2 className='text-xl lg:text-3xl font-bold text-primary mb-4'>PENGURUS INTI</h2>
                             <p className='font-base lg:text-md mb-2'>UKM CYBER UNUSA memiliki beberapa pengurus inti yang dapat anda hubungi, diantaranya Pembina, Ketua, serta Sekretaris</p><br />
-                            <a href="#" className='py-3 px-4 mt-8 text-base font-bold rounded-lg text-white bg-lowprim hover:shadow-lg hover:opacity-90 transition duration-300 ease-in-out'>Lihat anggota</a>
+                            <a href="/member" className='py-3 px-4 mt-8 text-base font-bold rounded-lg text-white bg-lowprim hover:shadow-lg hover:opacity-90 transition duration-300 ease-in-out'>Lihat anggota</a>
                         </div>
-                        <div className="flex flex-wrap space-x-6 justify-around lg:justify-end w-full px-4 my-4 lg:w-1/2">
+                        <div className="flex flex-wrap space-x-6 justify-around lg:justify-arround w-full px-4 my-8 lg:w-1/2 mx-auto">
                             <div className="imgpeng">
-                                <img src="/asset/people/leh.jpg" alt="" className='w-32 lg:h-36 lg:w-44 rounded-tr-3xl rounded-bl-3xl' />
+                                <img src="/asset/people/leh.jpg" alt="" className='w-32 lg:h-36 lg:w-48 rounded-tr-3xl rounded-bl-3xl' />
                                 <h4 className='font-semibold bg-lowprim my-2 text-white p-2 rounded rounded-tr-3xl shadow-sm'>Galeh<span className='block'>Ketua</span></h4>
                             </div>
                             <div className="imgpeng">
-                                <img src="/asset/people/yul.jpg" alt="" className='w-32 lg:h-36 lg:w-44 rounded-tr-3xl rounded-bl-3xl' />
-                                <h4 className='font-semibold bg-lowprim my-2 text-white p-2 rounded rounded-tr-3xl shadow-sm'>Yuliana<span className='block'>Sekretaris</span></h4>
+                                <img src="/asset/people/yul.jpg" alt="" className='w-32 lg:h-36 lg:w-48 rounded-tr-3xl rounded-bl-3xl' />
+                                <h4 className='font-semibold bg-lowprim my-2 text-white p-2 rounded rounded-tr-3xl shadow-sm'>Yuliana<span className='block'>Sekretaris 1</span></h4>
                             </div>
                             <div className="imgpeng">
-                                <img src="/asset/people/riz.jpg" alt="" className='w-32 lg:h-36 lg:w-44 rounded-tr-3xl rounded-bl-3xl' />
+                                <img src="/asset/people/nandini.jpg" alt="" className='w-32 lg:h-36 lg:w-48 rounded-tr-3xl rounded-bl-3xl' />
+                                <h4 className='font-semibold bg-lowprim my-2 text-white p-2 rounded rounded-tr-3xl shadow-sm'>Nandini<span className='block'>Sekretaris 2</span></h4>
+                            </div>
+                            <div className="imgpeng">
+                                <img src="/asset/people/riz.jpg" alt="" className='w-32 lg:h-36 lg:w-48 rounded-tr-3xl rounded-bl-3xl' />
                                 <h4 className='font-semibold bg-lowprim my-2 text-white p-2 rounded rounded-tr-3xl shadow-sm'>Rizqi PNB. S.T., M.T<span className='block'>Pembina</span></h4>
                             </div>
                         </div>
@@ -82,34 +92,34 @@ const Home = () => {
             <div className="container mx-auto px-6 flex flex-wrap gap-6 justify-center relative">
             <img src="asset/vector/v2.png" alt="decoration" className='absolute right-1 -top-44 w-60 hidden lg:block '/>
                 <div className="rounded-lg shadow-lg overflow-hidden mb-10 lg:w-72">
-                    <img src={galeh} alt="banner" className='w-full'/>
+                    <img src="/asset/banner/ux.jpg" alt="banner" className='w-full'/>
                     <div className='py-6 px-4'>
-                        <div className="font-semibold text-xl">Nama Kegiatan</div>
-                        <div className="font-semibold text-xl">Tanggal : </div>
+                        <div className="font-semibold text-xl">Pelatihan Desaim UI/UX</div>
+                        <div className="font-semibold mb-2 text-lg">Tanggal : -</div>
                         <div className="font-semibold text-xl text-end">
-                            <p className='font-normal text-sm mb-4 text-left'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id, tenetur?</p>
+                            <p className='font-normal text-sm mb-4 text-left'>Pelatihan UI/UX dari dasar sampai mahir, dengan instruktur yang sudah ber kompeten di bidangnya</p>
                             <a href="#" className='py-1 px-1 text-base font-bold rounded-lg text-white bg-lowprim hover:shadow-lg hover:opacity-90 transition duration-300 ease-in-out text-right'>Cooming soon...</a>
                         </div>
                     </div>
                 </div>
                 <div className="rounded-lg shadow-lg overflow-hidden mb-10 lg:w-72">
-                    <img src={galeh} alt="banner" className='w-full'/>
+                    <img src="/asset/banner/ads.jpg" alt="banner" className='w-full'/>
                     <div className='py-6 px-4'>
-                        <div className="font-semibold text-xl">Nama Kegiatan</div>
-                        <div className="font-semibold text-xl">Tanggal : </div>
+                        <div className="font-semibold text-xl">Pelatihan Digital Marketing</div>
+                        <div className="font-semibold mb-2 text-lg">Tanggal : - </div>
                         <div className="font-semibold text-xl text-end">
-                            <p className='font-normal text-sm mb-4 text-left'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id, tenetur?</p>
+                            <p className='font-normal text-sm mb-4 text-left'>Pelatihan digital Marketing dari pemula sampai bisa, dan tentunya akan dibimbing dengan instruktur yang sudah berpengalaman</p>
                             <a href="#" className='py-1 px-1 text-base font-bold rounded-lg text-white bg-lowprim hover:shadow-lg hover:opacity-90 transition duration-300 ease-in-out text-right'>Cooming soon...</a>
                         </div>
                     </div>
                 </div>
                 <div className="rounded-lg shadow-lg overflow-hidden mb-10 lg:w-72">
-                    <img src={galeh} alt="banner" className='w-full'/>
+                    <img src="/asset/banner/react.jpg" alt="banner" className='w-full'/>
                     <div className='py-6 px-4'>
-                        <div className="font-semibold text-xl">Nama Kegiatan</div>
-                        <div className="font-semibold text-xl">Tanggal : </div>
+                        <div className="font-semibold text-xl">Pelatihan React JS</div>
+                        <div className="font-semibold mb-2 text-lg">Tanggal : </div>
                         <div className="font-semibold text-xl text-end">
-                            <p className='font-normal text-sm mb-4 text-left'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id, tenetur?</p>
+                            <p className='font-normal text-sm mb-4 text-left'>Pengen menjadi web front end handal, ikuti pelatihan react js</p>
                             <a href="#" className='py-1 px-1 text-base font-bold rounded-lg text-white bg-lowprim hover:shadow-lg hover:opacity-90 transition duration-300 ease-in-out text-right'>Cooming soon...</a>
                         </div>
                     </div>
@@ -124,40 +134,50 @@ const Home = () => {
                 
                 <div className="container px-6 mx-auto flex flex-wrap gap-8 justify-center">
                     <div className="rounded-lg shadow-md mb-10 bg-white overflow-hidden w-80 lg:w-72">
-                        <img src={galeh} alt="dokumentasi" className='w-full' />
+                        <img src="/asset/doc/digital.jpg" alt="dokumentasi" className='w-full' />
                         <div className="py-6 px-4">
-                            <h3 className='font-semibold text-xl mb-2'>Bukber guys</h3>
-                            <p>Lorem ipsum dolor sit amet consectetamet consectetur adipisicing elit. </p>
+                            <h3 className='font-semibold text-xl mb-2'>Pelatihan Web CMS</h3>
+                            <p>Pelatihan web builder menggunakan weebly dan juga wordpress. </p>
                             <div className="font-semibold text-xl mb-2 mt-3 text-end text-primary">
                                 <a href="#" className='py-1 px-1 mb-4 text-base font-bold rounded-lg hover:shadow-lg hover:opacity-90 transition duration-300 ease-in-out'>Lihat...</a>
                             </div>
                         </div>
                     </div>
                     <div className="rounded-lg shadow-md mb-10 bg-white overflow-hidden w-80 lg:w-72">
-                        <img src={galeh} alt="dokumentasi" className='w-full' />
+                        <img src="/asset/doc/bukber.jpg" alt="dokumentasi" className='w-full' />
                         <div className="py-6 px-4">
-                            <h3 className='font-semibold text-xl mb-2'>Bukber guys</h3>
-                            <p>Lorem ipsum dolor sit amet consectetamet consectetur adipisicing el</p>
+                            <h3 className='font-semibold text-xl mb-2'>Bukber & Santunan Anak Yatim</h3>
+                            <p>UKM Cyber UNUSA mengadakan bukber sekaligus santunan anak yatim</p>
                             <div className="font-semibold text-xl mb-2 mt-3 text-end text-primary">
                                 <a href="#" className='py-1 px-1 mb-4 text-base font-bold rounded-lg hover:shadow-lg hover:opacity-90 transition duration-300 ease-in-out'>Lihat...</a>
                             </div>
                         </div>
                     </div>
                     <div className="rounded-lg shadow-md mb-10 bg-white overflow-hidden w-80 lg:w-72">
-                        <img src={galeh} alt="dokumentasi" className='w-full' />
+                        <img src="/asset/doc/ux.jpg" alt="dokumentasi" className='w-full' />
                         <div className="py-6 px-4">
-                            <h3 className='font-semibold text-xl mb-2'>Bukber guys</h3>
-                            <p>Lorem ipsum dolor sit amet consectetamet consectetur adipisicing elit. </p>
+                            <h3 className='font-semibold text-xl mb-2'>Worksop UI/UX Batch 1</h3>
+                            <p>Kegiatan bimbingan kepada mahasiswa UNUSA khususnya FEBTD UNUSA untuk mengikuti PKM</p>
                             <div className="font-semibold text-xl mb-2 mt-3 text-end text-primary">
                                 <a href="#" className='py-1 px-1 mb-4 text-base font-bold rounded-lg hover:shadow-lg hover:opacity-90 transition duration-300 ease-in-out'>Lihat...</a>
                             </div>
                         </div>
                     </div>
                     <div className="rounded-lg shadow-md mb-10 bg-white overflow-hidden w-80 lg:w-72">
-                        <img src={galeh} alt="dokumentasi" className='w-full' />
+                        <img src="/asset/doc/word.jpg" alt="dokumentasi" className='w-full' />
                         <div className="py-6 px-4">
-                            <h3 className='font-semibold text-xl mb-2'>Bukber guys</h3>
-                            <p>Lorem ipsum dolor sit amet consectetamet consectetur adipisicing el</p>
+                            <h3 className='font-semibold text-xl mb-2'>Worksop Microsoft Word</h3>
+                            <p>Kegiatan Pelatihan microsoft word dari dari 0 sampai mahir oleh ukm cyber untuk Mahasiswa UNUSA</p>
+                            <div className="font-semibold text-xl mb-2 mt-3 text-end text-primary">
+                                <a href="#" className='py-1 px-1 mb-4 text-base font-bold rounded-lg hover:shadow-lg hover:opacity-90 transition duration-300 ease-in-out'>Lihat...</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="rounded-lg shadow-md mb-10 bg-white overflow-hidden w-80 lg:w-72">
+                        <img src="/asset/doc/camp.jpg" alt="dokumentasi" className='w-full' />
+                        <div className="py-6 px-4">
+                            <h3 className='font-semibold text-xl mb-2'>CYBER DOLAN</h3>
+                            <p>Kegiatan Camping di Kebun ROJO CAMP Batu Malang</p>
                             <div className="font-semibold text-xl mb-2 mt-3 text-end text-primary">
                                 <a href="#" className='py-1 px-1 mb-4 text-base font-bold rounded-lg hover:shadow-lg hover:opacity-90 transition duration-300 ease-in-out'>Lihat...</a>
                             </div>

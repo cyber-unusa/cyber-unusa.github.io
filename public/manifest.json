@@ -1,19 +1,19 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "UKM CYBER UNUSA",
+  "name": "Web site UKM CYBER merupakan sebuah wadah bagi mahasiswa UNUSA untuk mempelajari tentang dunia teknologi baik itu web developer, jaringan komputer, AR/VR, dan masih banyak lagi.",
   "icons": [
     {
-      "src": "favicon.ico",
+      "src": "cyber-logo.png",
       "sizes": "64x64 32x32 24x24 16x16",
       "type": "image/x-icon"
     },
     {
-      "src": "logo192.png",
+      "src": "cyber-logo.png",
       "type": "image/png",
       "sizes": "192x192"
     },
     {
-      "src": "logo512.png",
+      "src": "cyber-logo.png",
       "type": "image/png",
       "sizes": "512x512"
     }
