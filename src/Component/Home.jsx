@@ -98,7 +98,7 @@ const Home = () => {
                         <div className="font-semibold mb-2 text-lg">Tanggal : -</div>
                         <div className="font-semibold text-xl text-end">
                             <p className='font-normal text-sm mb-4 text-left'>Pelatihan UI/UX dari dasar sampai mahir, dengan instruktur yang sudah ber kompeten di bidangnya</p>
-                            <a href="#" className='py-1 px-1 text-base font-bold rounded-lg text-white bg-lowprim hover:shadow-lg hover:opacity-90 transition duration-300 ease-in-out text-right'>Cooming soon...</a>
+                            <a href="/cooming" className='py-1 px-1 text-base font-bold rounded-lg text-white bg-lowprim hover:shadow-lg hover:opacity-90 transition duration-300 ease-in-out text-right'>Cooming soon...</a>
                         </div>
                     </div>
                 </div>
@@ -109,7 +109,7 @@ const Home = () => {
                         <div className="font-semibold mb-2 text-lg">Tanggal : - </div>
                         <div className="font-semibold text-xl text-end">
                             <p className='font-normal text-sm mb-4 text-left'>Pelatihan digital Marketing dari pemula sampai bisa, dan tentunya akan dibimbing dengan instruktur yang sudah berpengalaman</p>
-                            <a href="#" className='py-1 px-1 text-base font-bold rounded-lg text-white bg-lowprim hover:shadow-lg hover:opacity-90 transition duration-300 ease-in-out text-right'>Cooming soon...</a>
+                            <a href="/cooming" className='py-1 px-1 text-base font-bold rounded-lg text-white bg-lowprim hover:shadow-lg hover:opacity-90 transition duration-300 ease-in-out text-right'>Cooming soon...</a>
                         </div>
                     </div>
                 </div>
@@ -120,7 +120,7 @@ const Home = () => {
                         <div className="font-semibold mb-2 text-lg">Tanggal : </div>
                         <div className="font-semibold text-xl text-end">
                             <p className='font-normal text-sm mb-4 text-left'>Pengen menjadi web front end handal, ikuti pelatihan react js</p>
-                            <a href="#" className='py-1 px-1 text-base font-bold rounded-lg text-white bg-lowprim hover:shadow-lg hover:opacity-90 transition duration-300 ease-in-out text-right'>Cooming soon...</a>
+                            <a href="/cooming" className='py-1 px-1 text-base font-bold rounded-lg text-white bg-lowprim hover:shadow-lg hover:opacity-90 transition duration-300 ease-in-out text-right'>Cooming soon...</a>
                         </div>
                     </div>
                 </div>
@@ -139,7 +139,7 @@ const Home = () => {
                             <h3 className='font-semibold text-xl mb-2'>Pelatihan Web CMS</h3>
                             <p>Pelatihan web builder menggunakan weebly dan juga wordpress. </p>
                             <div className="font-semibold text-xl mb-2 mt-3 text-end text-primary">
-                                <a href="#" className='py-1 px-1 mb-4 text-base font-bold rounded-lg hover:shadow-lg hover:opacity-90 transition duration-300 ease-in-out'>Lihat...</a>
+                                <a href="/cooming" className='py-1 px-1 mb-4 text-base font-bold rounded-lg hover:shadow-lg hover:opacity-90 transition duration-300 ease-in-out'>Lihat...</a>
                             </div>
                         </div>
                     </div>
@@ -149,7 +149,7 @@ const Home = () => {
                             <h3 className='font-semibold text-xl mb-2'>Bukber & Santunan Anak Yatim</h3>
                             <p>UKM Cyber UNUSA mengadakan bukber sekaligus santunan anak yatim</p>
                             <div className="font-semibold text-xl mb-2 mt-3 text-end text-primary">
-                                <a href="#" className='py-1 px-1 mb-4 text-base font-bold rounded-lg hover:shadow-lg hover:opacity-90 transition duration-300 ease-in-out'>Lihat...</a>
+                                <a href="/cooming" className='py-1 px-1 mb-4 text-base font-bold rounded-lg hover:shadow-lg hover:opacity-90 transition duration-300 ease-in-out'>Lihat...</a>
                             </div>
                         </div>
                     </div>
@@ -159,7 +159,7 @@ const Home = () => {
                             <h3 className='font-semibold text-xl mb-2'>Worksop UI/UX Batch 1</h3>
                             <p>Kegiatan bimbingan kepada mahasiswa UNUSA khususnya FEBTD UNUSA untuk mengikuti PKM</p>
                             <div className="font-semibold text-xl mb-2 mt-3 text-end text-primary">
-                                <a href="#" className='py-1 px-1 mb-4 text-base font-bold rounded-lg hover:shadow-lg hover:opacity-90 transition duration-300 ease-in-out'>Lihat...</a>
+                                <a href="/cooming" className='py-1 px-1 mb-4 text-base font-bold rounded-lg hover:shadow-lg hover:opacity-90 transition duration-300 ease-in-out'>Lihat...</a>
                             </div>
                         </div>
                     </div>
@@ -169,7 +169,7 @@ const Home = () => {
                             <h3 className='font-semibold text-xl mb-2'>Worksop Microsoft Word</h3>
                             <p>Kegiatan Pelatihan microsoft word dari dari 0 sampai mahir oleh ukm cyber untuk Mahasiswa UNUSA</p>
                             <div className="font-semibold text-xl mb-2 mt-3 text-end text-primary">
-                                <a href="#" className='py-1 px-1 mb-4 text-base font-bold rounded-lg hover:shadow-lg hover:opacity-90 transition duration-300 ease-in-out'>Lihat...</a>
+                                <a href="/cooming" className='py-1 px-1 mb-4 text-base font-bold rounded-lg hover:shadow-lg hover:opacity-90 transition duration-300 ease-in-out'>Lihat...</a>
                             </div>
                         </div>
                     </div>
@@ -179,7 +179,7 @@ const Home = () => {
                             <h3 className='font-semibold text-xl mb-2'>CYBER DOLAN</h3>
                             <p>Kegiatan Camping di Kebun ROJO CAMP Batu Malang</p>
                             <div className="font-semibold text-xl mb-2 mt-3 text-end text-primary">
-                                <a href="#" className='py-1 px-1 mb-4 text-base font-bold rounded-lg hover:shadow-lg hover:opacity-90 transition duration-300 ease-in-out'>Lihat...</a>
+                                <a href="/cooming" className='py-1 px-1 mb-4 text-base font-bold rounded-lg hover:shadow-lg hover:opacity-90 transition duration-300 ease-in-out'>Lihat...</a>
                             </div>
                         </div>
                     </div>

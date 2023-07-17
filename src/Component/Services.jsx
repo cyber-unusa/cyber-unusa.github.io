@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import Footer from "../UI/Footer";
 import { Navbar } from "../UI/Navbar"
 import {  money,bag,task, webDev, uiux, rakitPc,undangan,fastWorking,codesBracket,rocket,icons1 } from "../assets/img/Icons";
@@ -225,9 +226,9 @@ export const Services=()=>{
                       rows="6"
                       className="bg-primary mt-2 w-4/5 rounded-md p-3 text-white resize-none"
                     ></textarea>
-                    <button className="bg-yellow p-2 block rounded-md mt-4 text-primary font-bold max-sm:m-auto max-sm:mt-4">
+                    <Link to="/cooming" ><button className="bg-yellow p-2 block rounded-md mt-4 text-primary font-bold max-sm:m-auto max-sm:mt-4">
                       SUBMIT
-                    </button>
+                    </button></Link>
                   </div>
                 </form>
               </div>

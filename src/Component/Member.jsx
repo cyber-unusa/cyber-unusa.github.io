@@ -93,6 +93,16 @@ const Member = () => {
               <h4 className='mt-2 text-md lg:text-xl font-bold text-center'>Ifa</h4>
               <p className='text-sm lg:text-lg font-semibold text-center'>3130021010</p>
             </div>
+            <div className='contaniner mb-4 lg:mb-16'>
+              <img src="/asset/member/andika.jpg" alt="kadiv" className='rounded-full w-20 lg:w-44 mx-4 border border-secbg shadow-md'/>
+              <h4 className='mt-2 text-md lg:text-xl font-bold text-center'>Andika</h4>
+              <p className='text-sm lg:text-lg font-semibold text-center'>3130022036</p>
+            </div>
+            <div className='contaniner mb-4 lg:mb-16'>
+              <img src="/asset/member/alifian.jpg" alt="kadiv" className='rounded-full w-20 lg:w-44 mx-4 border border-secbg shadow-md'/>
+              <h4 className='mt-2 text-md lg:text-xl font-bold text-center'>Alifian</h4>
+              <p className='text-sm lg:text-lg font-semibold text-center'>3130021024</p>
+            </div>
             
           </div>
         </div>
