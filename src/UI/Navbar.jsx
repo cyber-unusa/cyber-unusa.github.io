@@ -1,5 +1,4 @@
 import React,{useState} from 'react'
-import cyber from '../assets/img/cyber-logo.png'
 import { Link } from 'react-router-dom'
 
 export  const Navbar =()=>{
@@ -19,7 +18,7 @@ export  const Navbar =()=>{
           <div className="shadow-md w-full fixed top-0 left-0 z-20">
             <div className="md:flex items-center justify-between bg-white py-1 md:px-10 px-7">
               <div className="font-bold text-2xl cursor-pointer flex items-center">
-                <img src={cyber} alt="logo" className="w-16 pl-2" />
+                <img src="/asset/cyber-logo.png" alt="logo" className="w-16 pl-2" />
               </div>
               <div
                 className="text-3xl absolute right-8 top-6 cursor-pointer md:hidden"
