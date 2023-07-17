@@ -54,44 +54,44 @@ const Member = () => {
           
           <div className='mt-11 flex flex-wrap justify-around lg:pt-4 lg:px-32'>
             <div className='contaniner mb-4 lg:mb-16'>
-              <img src="/asset/people/nan.jpg" alt="kadiv" className='rounded-full w-20 lg:w-44 mx-4 border border-secbg shadow-md'/>
-              <h4 className='mt-2 text-md lg:text-xl font-bold text-center'>Galeh</h4>
+              <img src="/asset/member/wava.jpg" alt="kadiv" className='rounded-full w-20 lg:w-44 mx-4 border border-secbg shadow-md'/>
+              <h4 className='mt-2 text-md lg:text-xl font-bold text-center'>Wava</h4>
+              <p className='text-sm lg:text-lg font-semibold text-center'>3130022043</p>
+            </div>
+            <div className='contaniner mb-4 lg:mb-16'>
+              <img src="/asset/member/ainin.jpg" alt="kadiv" className='rounded-full w-20 lg:w-44 mx-4 border border-secbg shadow-md'/>
+              <h4 className='mt-2 text-md lg:text-xl font-bold text-center'>Ainin</h4>
+              <p className='text-sm lg:text-lg font-semibold text-center'>3130021001</p>
+            </div>
+            <div className='contaniner mb-4 lg:mb-16'>
+              <img src="/asset/member/fatur.jpg" alt="kadiv" className='rounded-full w-20 lg:w-44 mx-4 border border-secbg shadow-md'/>
+              <h4 className='mt-2 text-md lg:text-xl font-bold text-center'>Fatkhur</h4>
               <p className='text-sm lg:text-lg font-semibold text-center'>3130021003</p>
             </div>
             <div className='contaniner mb-4 lg:mb-16'>
-              <img src="/asset/people/nan.jpg" alt="kadiv" className='rounded-full w-20 lg:w-44 mx-4 border border-secbg shadow-md'/>
-              <h4 className='mt-2 text-md lg:text-xl font-bold text-center'>Galeh</h4>
-              <p className='text-sm lg:text-lg font-semibold text-center'>3130021003</p>
+              <img src="/asset/member/chelsy.jpg" alt="kadiv" className='rounded-full w-20 lg:w-44 mx-4 border border-secbg shadow-md'/>
+              <h4 className='mt-2 text-md lg:text-xl font-bold text-center'>Chelsy</h4>
+              <p className='text-sm lg:text-lg font-semibold text-center'>3130021028</p>
             </div>
             <div className='contaniner mb-4 lg:mb-16'>
-              <img src="/asset/people/nan.jpg" alt="kadiv" className='rounded-full w-20 lg:w-44 mx-4 border border-secbg shadow-md'/>
-              <h4 className='mt-2 text-md lg:text-xl font-bold text-center'>Galeh</h4>
-              <p className='text-sm lg:text-lg font-semibold text-center'>3130021003</p>
+              <img src="/asset/member/rio.jpg" alt="kadiv" className='rounded-full w-20 lg:w-44 mx-4 border border-secbg shadow-md'/>
+              <h4 className='mt-2 text-md lg:text-xl font-bold text-center'>Rio</h4>
+              <p className='text-sm lg:text-lg font-semibold text-center'>3130021011</p>
             </div>
             <div className='contaniner mb-4 lg:mb-16'>
-              <img src="/asset/people/nan.jpg" alt="kadiv" className='rounded-full w-20 lg:w-44 mx-4 border border-secbg shadow-md'/>
-              <h4 className='mt-2 text-md lg:text-xl font-bold text-center'>Galeh</h4>
-              <p className='text-sm lg:text-lg font-semibold text-center'>3130021003</p>
+              <img src="/asset/member/lutfiah.jpg" alt="kadiv" className='rounded-full w-20 lg:w-44 mx-4 border border-secbg shadow-md'/>
+              <h4 className='mt-2 text-md lg:text-xl font-bold text-center'>Lutfiah</h4>
+              <p className='text-sm lg:text-lg font-semibold text-center'>3130021009</p>
             </div>
             <div className='contaniner mb-4 lg:mb-16'>
-              <img src="/asset/people/nan.jpg" alt="kadiv" className='rounded-full w-20 lg:w-44 mx-4 border border-secbg shadow-md'/>
-              <h4 className='mt-2 text-md lg:text-xl font-bold text-center'>Galeh</h4>
-              <p className='text-sm lg:text-lg font-semibold text-center'>3130021003</p>
+              <img src="/asset/member/obit.jpg" alt="kadiv" className='rounded-full w-20 lg:w-44 mx-4 border border-secbg shadow-md'/>
+              <h4 className='mt-2 text-md lg:text-xl font-bold text-center'>Robith</h4>
+              <p className='text-sm lg:text-lg font-semibold text-center'>3130022044</p>
             </div>
             <div className='contaniner mb-4 lg:mb-16'>
-              <img src="/asset/people/nan.jpg" alt="kadiv" className='rounded-full w-20 lg:w-44 mx-4 border border-secbg shadow-md'/>
-              <h4 className='mt-2 text-md lg:text-xl font-bold text-center'>Galeh</h4>
-              <p className='text-sm lg:text-lg font-semibold text-center'>3130021003</p>
-            </div>
-            <div className='contaniner mb-4 lg:mb-16'>
-              <img src="/asset/people/nan.jpg" alt="kadiv" className='rounded-full w-20 lg:w-44 mx-4 border border-secbg shadow-md'/>
-              <h4 className='mt-2 text-md lg:text-xl font-bold text-center'>Galeh</h4>
-              <p className='text-sm lg:text-lg font-semibold text-center'>3130021003</p>
-            </div>
-            <div className='contaniner mb-4 lg:mb-16'>
-              <img src="/asset/people/nan.jpg" alt="kadiv" className='rounded-full w-20 lg:w-44 mx-4 border border-secbg shadow-md'/>
-              <h4 className='mt-2 text-md lg:text-xl font-bold text-center'>Galeh</h4>
-              <p className='text-sm lg:text-lg font-semibold text-center'>3130021003</p>
+              <img src="/asset/member/ifa.jpg" alt="kadiv" className='rounded-full w-20 lg:w-44 mx-4 border border-secbg shadow-md'/>
+              <h4 className='mt-2 text-md lg:text-xl font-bold text-center'>Ifa</h4>
+              <p className='text-sm lg:text-lg font-semibold text-center'>3130021010</p>
             </div>
             
           </div>
