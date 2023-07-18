@@ -216,18 +216,168 @@ const Member = () => {
                 </p>
               </div>
             </div>
-<<<<<<< HEAD
+            <div className="contaniner mb-4 lg:mb-16 flex-row justify-center items-center">
+              <img
+                src="/asset/member/3130022035_ilham.jpg"
+                alt="kadiv"
+                className="rounded-3xl w-20 lg:w-44 mx-4 border border-secbg shadow-md"
+              />
+              <div className="bar md:p-1 lg:p-2 mt-4 m-auto w-4/5   bg-primary justify-center text-white lg:rounded-t-3xl max-md:rounded-t-2xl md:rounded-t-2xl max-sm:rounded-t-2xl">
+                <h4 className=" text-md lg:text-xl font-bold text-center">
+                  Ilham
+                </h4>
+                <p className="text-sm lg:text-lg font-semibold text-center">
+                  3130022035
+                </p>
+              </div>
+            </div>
+            <div className="contaniner mb-4 lg:mb-16 flex-row justify-center items-center">
+              <img
+                src="/asset/member/citra_4330022014.jpg"
+                alt="kadiv"
+                className="rounded-3xl w-20 lg:w-44 mx-4 border border-secbg shadow-md"
+              />
+              <div className="bar md:p-1 lg:p-2 mt-4 m-auto w-4/5   bg-primary justify-center text-white lg:rounded-t-3xl max-md:rounded-t-2xl md:rounded-t-2xl max-sm:rounded-t-2xl">
+                <h4 className=" text-md lg:text-xl font-bold text-center">
+                  Citra
+                </h4>
+                <p className="text-sm lg:text-lg font-semibold text-center">
+                  4330022014
+                </p>
+              </div>
+            </div>
+            <div className="contaniner mb-4 lg:mb-16 flex-row justify-center items-center">
+              <img
+                src="/asset/member/3130021060_farhan.jpg"
+                alt="kadiv"
+                className="rounded-3xl w-20 lg:w-44 mx-4 border border-secbg shadow-md"
+              />
+              <div className="bar md:p-1 lg:p-2 mt-4 m-auto w-4/5   bg-primary justify-center text-white lg:rounded-t-3xl max-md:rounded-t-2xl md:rounded-t-2xl max-sm:rounded-t-2xl">
+                <h4 className=" text-md lg:text-xl font-bold text-center">
+                  Febrian
+                </h4>
+                <p className="text-sm lg:text-lg font-semibold text-center">
+                3130021060
+                </p>
+              </div>
+            </div>
+            <div className="contaniner mb-4 lg:mb-16 flex-row justify-center items-center">
+              <img
+                src="/asset/member/fira_4330022016.jpg"
+                alt="kadiv"
+                className="rounded-3xl w-20 lg:w-44 mx-4 border border-secbg shadow-md"
+              />
+              <div className="bar md:p-1 lg:p-2 mt-4 m-auto w-4/5   bg-primary justify-center text-white lg:rounded-t-3xl max-md:rounded-t-2xl md:rounded-t-2xl max-sm:rounded-t-2xl">
+                <h4 className=" text-md lg:text-xl font-bold text-center">
+                  Fira
+                </h4>
+                <p className="text-sm lg:text-lg font-semibold text-center">
+                4330022016
+                </p>
+              </div>
+            </div>
+            <div className="contaniner mb-4 lg:mb-16 flex-row justify-center items-center">
+              <img
+                src="/asset/member/dhava_4330022011.jpg"
+                alt="kadiv"
+                className="rounded-3xl w-20 lg:w-44 mx-4 border border-secbg shadow-md"
+              />
+              <div className="bar md:p-1 lg:p-2 mt-4 m-auto w-4/5   bg-primary justify-center text-white lg:rounded-t-3xl max-md:rounded-t-2xl md:rounded-t-2xl max-sm:rounded-t-2xl">
+                <h4 className=" text-md lg:text-xl font-bold text-center">
+                  Dhava
+                </h4>
+                <p className="text-sm lg:text-lg font-semibold text-center">
+                4330022011
+                </p>
+              </div>
+            </div>
+            <div className="contaniner mb-4 lg:mb-16 flex-row justify-center items-center">
+              <img
+                src="/asset/member/farhan.jpg"
+                alt="kadiv"
+                className="rounded-3xl w-20 lg:w-44 mx-4 border border-secbg shadow-md"
+              />
+              <div className="bar md:p-1 lg:p-2 mt-4 m-auto w-4/5   bg-primary justify-center text-white lg:rounded-t-3xl max-md:rounded-t-2xl md:rounded-t-2xl max-sm:rounded-t-2xl">
+                <h4 className=" text-md lg:text-xl font-bold text-center">
+                  Farhan
+                </h4>
+                <p className="text-sm lg:text-lg font-semibold text-center">
+                3130022022
+                </p>
+              </div>
+            </div>
+            <div className="contaniner mb-4 lg:mb-16 flex-row justify-center items-center">
+              <img
+                src="/asset/member/hasib.jpg"
+                alt="kadiv"
+                className="rounded-3xl w-20 lg:w-44 mx-4 border border-secbg shadow-md"
+              />
+              <div className="bar md:p-1 lg:p-2 mt-4 m-auto w-4/5   bg-primary justify-center text-white lg:rounded-t-3xl max-md:rounded-t-2xl md:rounded-t-2xl max-sm:rounded-t-2xl">
+                <h4 className=" text-md lg:text-xl font-bold text-center">
+                  Hasib
+                </h4>
+                <p className="text-sm lg:text-lg font-semibold text-center">
+                3130022002
+                </p>
+              </div>
+            </div>
+            <div className="contaniner mb-4 lg:mb-16 flex-row justify-center items-center">
+              <img
+                src="/asset/member/alifian.jpg"
+                alt="kadiv"
+                className="rounded-3xl w-20 lg:w-44 mx-4 border border-secbg shadow-md"
+              />
+              <div className="bar md:p-1 lg:p-2 mt-4 m-auto w-4/5   bg-primary justify-center text-white lg:rounded-t-3xl max-md:rounded-t-2xl md:rounded-t-2xl max-sm:rounded-t-2xl">
+                <h4 className=" text-md lg:text-xl font-bold text-center">
+                  Alifian
+                </h4>
+                <p className="text-sm lg:text-lg font-semibold text-center">
+                3130022024
+                </p>
+              </div>
+            </div>
+            <div className="contaniner mb-4 lg:mb-16 flex-row justify-center items-center">
+              <img
+                src="/asset/member/andika.jpg"
+                alt="kadiv"
+                className="rounded-3xl w-20 lg:w-44 mx-4 border border-secbg shadow-md"
+              />
+              <div className="bar md:p-1 lg:p-2 mt-4 m-auto w-4/5   bg-primary justify-center text-white lg:rounded-t-3xl max-md:rounded-t-2xl md:rounded-t-2xl max-sm:rounded-t-2xl">
+                <h4 className=" text-md lg:text-xl font-bold text-center">
+                  Andika
+                </h4>
+                <p className="text-sm lg:text-lg font-semibold text-center">
+                3130022036
+                </p>
+              </div>
+            </div>
+            <div className="contaniner mb-4 lg:mb-16 flex-row justify-center items-center">
+              <img
+                src="/asset/member/halili_3130022042.jpg"
+                alt="kadiv"
+                className="rounded-3xl w-20 lg:w-44 mx-4 border border-secbg shadow-md"
+              />
+              <div className="bar md:p-1 lg:p-2 mt-4 m-auto w-4/5   bg-primary justify-center text-white lg:rounded-t-3xl max-md:rounded-t-2xl md:rounded-t-2xl max-sm:rounded-t-2xl">
+                <h4 className=" text-md lg:text-xl font-bold text-center">
+                  Halili
+                </h4>
+                <p className="text-sm lg:text-lg font-semibold text-center">
+                3130022042
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
+
       {/**List Divisi */}
-      <section id="divisi1">
-        <div className="container flex flex-wrap lg:m-auto ">
+      <section id="divisi1" className='mt-28'>
+        <div className="container flex flex-wrap lg:m-auto">
           <div
             id="cyber-belajar"
             className=" p-3 bg-primary sm:basis-full lg:basis-2/4 md:basis-full text-center rounded-r-2xl"
           >
-            <h1 className="text-primary text-white lg:text-2xl font-bold text-center">
+            <h1 className="text-white lg:text-2xl font-bold text-center">
               CYBER BELAJAR
             </h1>
             {/** */}
@@ -237,35 +387,22 @@ const Member = () => {
             id="cyber-mengajar"
             className=" p-3 sm:basis-full lg:basis-1/2 md: basis-full text-center "
           >
-            <h1 className="text-primary text-primary lg:text-2xl font-bold text-center">
+            <h1 className="text-primary lg:text-2xl font-bold text-center">
               CYBER MENGAJAR
             </h1>
             {SliderMember(cyberMengajar)}
-=======
-            <div className='contaniner mb-4 lg:mb-16'>
-              <img src="/asset/member/andika.jpg" alt="kadiv" className='rounded-full w-20 lg:w-44 mx-4 border border-secbg shadow-md'/>
-              <h4 className='mt-2 text-md lg:text-xl font-bold text-center'>Andika</h4>
-              <p className='text-sm lg:text-lg font-semibold text-center'>3130022036</p>
-            </div>
-            <div className='contaniner mb-4 lg:mb-16'>
-              <img src="/asset/member/alifian.jpg" alt="kadiv" className='rounded-full w-20 lg:w-44 mx-4 border border-secbg shadow-md'/>
-              <h4 className='mt-2 text-md lg:text-xl font-bold text-center'>Alifian</h4>
-              <p className='text-sm lg:text-lg font-semibold text-center'>3130021024</p>
-            </div>
-            
->>>>>>> 81dc99ce5af4deae22f33b5582faf7d4ddaa06f4
           </div>
         </div>
       </section>
 
-      <section id="divisi2">
-        <div className="container flex  flex-wrap-reverse lg:m-auto ">
+      <section id="divisi2" className='lg:mb-32'>
+        <div className="container flex  flex-wrap-reverse lg:m-auto">
           <div
             id="cyber-belajar"
             className=" p-3 bg-white sm:basis-full lg:basis-1/2 text-center rounded-r-3xl"
           >
-            <h1 className="text-primary text-primary lg:text-2xl font-bold text-center">
-              CYBER BELAJAR
+            <h1 className="text-primary lg:text-2xl font-bold text-center">
+              CYBER BERBAGI
             </h1>
             {/** */}
             {SliderMember(cyberBerbagi)}
@@ -274,8 +411,8 @@ const Member = () => {
             id="cyber-mengajar"
             className=" p-3 bg-primary sm:basis-full lg:basis-1/2 text-center rounded-l-2xl"
           >
-            <h1 className="text-primary text-white lg:text-2xl font-bold text-center">
-              CYBER MENGAJAR
+            <h1 className="text-white lg:text-2xl font-bold text-center">
+              CYBER EVENT
             </h1>
             {SliderMember(cyberEvent)}
           </div>

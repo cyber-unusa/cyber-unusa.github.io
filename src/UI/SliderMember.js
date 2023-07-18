@@ -13,13 +13,13 @@ export const SliderMember = (data) => {
   slidesToScroll: 1,
 };
   return (
-    <div className="container grid grid-cols-1 gap-3 p-8">
+    <div className="container grid grid-cols-1 gap-3 p-4">
       <Slider {...sliderSettings} >
         {data.map((belajar ,index) => {
           return (
             <>
               <div key={index} className="membersz mx-3 mt-4 text-center">
-                <div className="h-72 drop-shadow-lg">
+                <div className="lg:h-60 drop-shadow-lg">
                   {mockUp(belajar.foto)}
                 </div>
                 <p
@@ -29,7 +29,7 @@ export const SliderMember = (data) => {
                       : "font-medium  text-xl text-white"
                   }
                 >
-                  {belajar.name}
+                  {/* {belajar.name} */}
                 </p>
                 <p
                   className={
@@ -38,7 +38,7 @@ export const SliderMember = (data) => {
                       : "font-medium italic text-xl text-white"
                   }
                 >
-                  {belajar.jabatan}
+                  {/* {belajar.jabatan} */}
                 </p>
               </div>
             </>
