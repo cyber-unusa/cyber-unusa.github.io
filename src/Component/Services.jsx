@@ -8,13 +8,13 @@ export const Services=()=>{
         <section id="head" className="">
           <div className="container px-4 lg:px-16 pb-12 flex flex-col lg:flex-row">
             <div className="contens md:w-1/2 lg:w-2/4 pt-10 md:pt-20 lg:pt-36">
-              <h1 className="text-2xl md:text-4xl lg:text-5xl font-bold text-primary">
+              <h1 className="max-sm:text-4xl sm:text-4xl md:text-4xl lg:text-5xl font-bold text-primary">
                 PERLU
                 <span className="font-bold border-0 rounded-md bg-primary text-white m-4">
                   <span className="px-4 py-6">WEBSITE</span>
                 </span>
               </h1>
-              <h1 className="text-2xl md:text-4xl lg:text-5xl font-bold text-primary mt-4">
+              <h1 className="max-sm:text-4xl sm:text-4xl md:text-4xl lg:text-5xl font-bold text-primary mt-4">
                 TENANG ADA KAMI !!!
               </h1>
               <h2 className="font-semibold text-lowprim mt-2 text-xl md:text-2xl">
@@ -145,7 +145,7 @@ export const Services=()=>{
 
         <section id="Konsultasi" className="bg-secbg overflow-hidden lg:mt-28">
           <div className="container flex flex-col md:flex-row p-12 lg:p-20">
-            <div className="item1 basis-2/4 md:basis-1/2 md:pt-0 lg:basis-1/2 relative pt-24 ">
+            <div className="item1 basis-2/4 md:basis-1/2 md:pt-0 lg:basis-1/2 relative pt-24 ] ">
               <h1 className="text-primary font-extrabold lg:text-3xl max-sm:text-xl md:text-2xl">
                 Kami sudah membantu beberapa
               </h1>
@@ -165,15 +165,16 @@ export const Services=()=>{
                 {codesBracket()}
               </div>
             </div>
-            <div className="item2 basis-2/4 md:basis-1/2 lg:basis-1/2 max-sm:pt-44 md:ml-8 lg:pl-32">
+            {/**konsul */}
+            <div className="item2 basis-2/4 md:basis-1/2 lg:basis-1/2 max-sm:mt-52 md:ml-8 lg:pl-32">
               <div className="headTitle flex">
                 <div className="contens1 max-sm:m-auto">
-                  <h1 className="text-primary font-extrabold lg:text-3xl max-sm:text-2xl  md:text-xl">
+                  <h1 className="text-primary font-extrabold lg:text-3xl max-sm:text-3xl sm:text-3xl  md:text-xl">
                     Yuk Konsultasi <span className="block">Sekarang Juga</span>
                   </h1>
                 </div>
                 <div className="contens2 pl-4 items-center pt-1">
-                  <h1 className="text-white font-extrabold rounded-md lg:text-4xl bg-primary p-3 md:text-2xl">
+                  <h1 className="text-white font-extrabold rounded-md lg:text-4xl max-sm:text-3xl sm:text-4xl bg-primary p-3 md:text-2xl">
                     GRATIS
                   </h1>
                 </div>
