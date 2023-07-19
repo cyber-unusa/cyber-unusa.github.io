@@ -2,6 +2,7 @@ import React, { useRef } from 'react'
 import { Navbar } from '../UI/Navbar'
 import Footer from '../UI/Footer'
 import {  discord, gmail, instagram, youtube } from "../assets/img/Icons";
+import { Link } from 'react-router-dom';
 
 const Home = () => {
 
@@ -61,7 +62,7 @@ const Home = () => {
                         <div className="w-full my-36 px-8 mb-10 lg:w-1/3">
                             <h2 className='text-xl lg:text-3xl font-bold text-primary mb-4 font-nunito'>PENGURUS INTI</h2>
                             <p className='font-base lg:text-md mb-2 font-poppin'>UKM CYBER UNUSA memiliki beberapa pengurus inti yang dapat anda hubungi, diantaranya Pembina, Ketua, serta Sekretaris</p><br />
-                            <a href="/member" className='py-3 px-4 mt-8 text-base font-bold rounded-lg text-white bg-lowprim hover:shadow-lg hover:opacity-90 transition duration-300 ease-in-out font-poppin'>Lihat anggota</a>
+                            <Link to='/member'><a className='py-3 px-4 mt-8 text-base font-bold rounded-lg text-white bg-lowprim hover:shadow-lg hover:opacity-90 transition duration-300 ease-in-out font-poppin'>Lihat anggota</a></Link>
                         </div>
                         <div className="flex flex-wrap space-x-6 justify-around lg:justify-arround w-full px-4 my-8 lg:w-1/2 mx-auto">
                             <div className="imgpeng">
@@ -99,7 +100,7 @@ const Home = () => {
                         <div className="font-semibold mb-2 text-lg font-nunito">Tanggal : -</div>
                         <div className="font-semibold text-xl text-end">
                             <p className='font-normal text-sm mb-4 text-left font-poppin'>Pelatihan UI/UX dari dasar sampai mahir, dengan instruktur yang sudah ber kompeten di bidangnya</p>
-                            <a href="/cooming" className='py-1 px-1 text-base font-bold rounded-lg text-white bg-lowprim hover:shadow-lg hover:opacity-90 transition duration-300 ease-in-out text-right font-poppin'>Cooming soon...</a>
+                            <Link to='/cooming'><a className='py-1 px-1 text-base font-bold rounded-lg text-white bg-lowprim hover:shadow-lg hover:opacity-90 transition duration-300 ease-in-out text-right font-poppin'>Cooming soon...</a></Link>
                         </div>
                     </div>
                 </div>
@@ -110,7 +111,7 @@ const Home = () => {
                         <div className="font-semibold mb-2 text-lg font-nunito">Tanggal : - </div>
                         <div className="font-semibold text-xl text-end">
                             <p className='font-normal text-sm mb-4 text-left font-poppin'>Pelatihan digital Marketing dari pemula sampai bisa, dan tentunya akan dibimbing dengan instruktur yang sudah berpengalaman</p>
-                            <a href="/cooming" className='py-1 px-1 text-base font-bold rounded-lg text-white bg-lowprim hover:shadow-lg hover:opacity-90 transition duration-300 ease-in-out text-right font-poppin'>Cooming soon...</a>
+                            <Link to='/cooming'><a className='py-1 px-1 text-base font-bold rounded-lg text-white bg-lowprim hover:shadow-lg hover:opacity-90 transition duration-300 ease-in-out text-right font-poppin'>Cooming soon...</a></Link>
                         </div>
                     </div>
                 </div>
@@ -121,7 +122,7 @@ const Home = () => {
                         <div className="font-semibold mb-2 text-lg font-nunito">Tanggal : </div>
                         <div className="font-semibold text-xl text-end">
                             <p className='font-normal text-sm mb-4 text-left font-poppin'>Pengen menjadi web front end handal, ikuti pelatihan react js</p>
-                            <a href="/cooming" className='py-1 px-1 text-base font-bold rounded-lg text-white bg-lowprim hover:shadow-lg hover:opacity-90 transition duration-300 ease-in-out text-right font-poppin'>Cooming soon...</a>
+                            <Link to='/cooming'><a className='py-1 px-1 text-base font-bold rounded-lg text-white bg-lowprim hover:shadow-lg hover:opacity-90 transition duration-300 ease-in-out text-right font-poppin'>Cooming soon...</a></Link>
                         </div>
                     </div>
                 </div>
@@ -135,52 +136,52 @@ const Home = () => {
                 
                 <div className="container px-6 mx-auto flex flex-wrap gap-8 justify-center">
                     <div className="rounded-lg shadow-md mb-10 bg-white overflow-hidden w-80 lg:w-72">
-                        <img src="/asset/doc/digital.jpg" alt="dokumentasi" className='w-full' />
+                        <img src="/asset/doc/digital.JPG" alt="dokumentasi" className='w-full' />
                         <div className="py-6 px-4">
                             <h3 className='font-semibold text-xl mb-2 font-nunito'>Pelatihan Web CMS</h3>
                             <p className='font-poppin'>Pelatihan web builder menggunakan weebly dan juga wordpress. </p>
                             <div className="font-semibold text-xl mb-2 mt-3 text-end text-primary">
-                                <a href="/cooming" className='py-1 px-1 mb-4 text-base font-bold rounded-lg hover:shadow-lg hover:opacity-90 transition duration-300 ease-in-out font-poppin'>Lihat...</a>
+                                <Link to='/cooming'><p className='w-16 py-1 px-1 mb-4 text-base font-bold rounded-lg hover:shadow-lg hover:opacity-90 transition duration-300 ease-in-out font-poppin'>Lihat...</p></Link>
                             </div>
                         </div>
                     </div>
                     <div className="rounded-lg shadow-md mb-10 bg-white overflow-hidden w-80 lg:w-72">
-                        <img src="/asset/doc/bukber.jpg" alt="dokumentasi" className='w-full' />
+                        <img src="/asset/doc/bukber.JPG" alt="dokumentasi" className='w-full' />
                         <div className="py-6 px-4">
                             <h3 className='font-semibold text-xl mb- font-nunito'>Bukber & Santunan Anak Yatim</h3>
                             <p className='font-poppin'>UKM Cyber UNUSA mengadakan bukber sekaligus santunan anak yatim</p>
                             <div className="font-semibold text-xl mb-2 mt-3 text-end text-primary">
-                                <a href="/cooming" className='py-1 px-1 mb-4 text-base font-bold rounded-lg hover:shadow-lg hover:opacity-90 transition duration-300 ease-in-out font-poppin'>Lihat...</a>
+                            <Link to='/cooming'><p className='w-16 py-1 px-1 mb-4 text-base font-bold rounded-lg hover:shadow-lg hover:opacity-90 transition duration-300 ease-in-out font-poppin'>Lihat...</p></Link>
                             </div>
                         </div>
                     </div>
                     <div className="rounded-lg shadow-md mb-10 bg-white overflow-hidden w-80 lg:w-72">
-                        <img src="/asset/doc/ux.jpg" alt="dokumentasi" className='w-full' />
+                        <img src="/asset/doc/ux.JPG" alt="dokumentasi" className='w-full' />
                         <div className="py-6 px-4">
                             <h3 className='font-semibold text-xl mb-2 font-nunito'>Worksop UI/UX Batch 1</h3>
                             <p className='font-poppin'>Kegiatan bimbingan kepada mahasiswa UNUSA khususnya FEBTD UNUSA untuk mengikuti PKM</p>
                             <div className="font-semibold text-xl mb-2 mt-3 text-end text-primary">
-                                <a href="/cooming" className='py-1 px-1 mb-4 text-base font-bold rounded-lg hover:shadow-lg hover:opacity-90 transition duration-300 ease-in-out font-poppin'>Lihat...</a>
+                            <Link to='/cooming'><p className='w-16 py-1 px-1 mb-4 text-base font-bold rounded-lg hover:shadow-lg hover:opacity-90 transition duration-300 ease-in-out font-poppin'>Lihat...</p></Link>
                             </div>
                         </div>
                     </div>
                     <div className="rounded-lg shadow-md mb-10 bg-white overflow-hidden w-80 lg:w-72">
-                        <img src="/asset/doc/word.jpg" alt="dokumentasi" className='w-full' />
+                        <img src="/asset/doc/word.JPG" alt="dokumentasi" className='w-full' />
                         <div className="py-6 px-4">
                             <h3 className='font-semibold text-xl mb-2 font-nunito'>Worksop Microsoft Word</h3>
                             <p className='font-poppin'>Kegiatan Pelatihan microsoft word dari dari 0 sampai mahir oleh ukm cyber untuk Mahasiswa UNUSA</p>
                             <div className="font-semibold text-xl mb-2 mt-3 text-end text-primary">
-                                <a href="/cooming" className='py-1 px-1 mb-4 text-base font-bold rounded-lg hover:shadow-lg hover:opacity-90 transition duration-300 ease-in-out font-poppin'>Lihat...</a>
+                            <Link to='/cooming'><p className='w-16 py-1 px-1 mb-4 text-base font-bold rounded-lg hover:shadow-lg hover:opacity-90 transition duration-300 ease-in-out font-poppin'>Lihat...</p></Link>
                             </div>
                         </div>
                     </div>
                     <div className="rounded-lg shadow-md mb-10 bg-white overflow-hidden w-80 lg:w-72">
-                        <img src="/asset/doc/camp.jpg" alt="dokumentasi" className='w-full' />
+                        <img src="/asset/doc/camp.JPG" alt="dokumentasi" className='w-full' />
                         <div className="py-6 px-4">
                             <h3 className='font-semibold text-xl mb-2 font-nunito'>CYBER DOLAN</h3>
                             <p className='font-poppin'>Kegiatan Camping di Kebun ROJO CAMP Batu Malang</p>
                             <div className="font-semibold text-xl mb-2 mt-3 text-end text-primary">
-                                <a href="/cooming" className='py-1 px-1 mb-4 text-base font-bold rounded-lg hover:shadow-lg hover:opacity-90 transition duration-300 ease-in-out font-poppin'>Lihat...</a>
+                            <Link to='/cooming'><p className='w-16 py-1 px-1 mb-4 text-base font-bold rounded-lg hover:shadow-lg hover:opacity-90 transition duration-300 ease-in-out font-poppin'>Lihat...</p></Link>
                             </div>
                         </div>
                     </div>
