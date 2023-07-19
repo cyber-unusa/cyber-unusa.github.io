@@ -29,7 +29,7 @@ export const SliderMember = (data) => {
                       : "font-medium  text-xl text-white"
                   }
                 >
-                  {/* {belajar.name} */}
+                  {belajar.name}
                 </p>
                 <p
                   className={
