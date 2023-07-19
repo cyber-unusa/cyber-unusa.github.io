@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/company-profile-cyber/static/css/main.be4bd425.css",
+    "main.js": "/company-profile-cyber/static/js/main.c52fc220.js",
+    "static/media/slick.svg": "/company-profile-cyber/static/media/slick.2630a3e3eab21c607e21.svg",
+    "static/media/slick.eot": "/company-profile-cyber/static/media/slick.a4e97f5a2a64f0ab1323.eot",
+    "static/media/slick.ttf": "/company-profile-cyber/static/media/slick.c94f7671dcc99dce43e2.ttf",
+    "static/media/slick.woff": "/company-profile-cyber/static/media/slick.295183786cd8a1389865.woff",
+    "index.html": "/company-profile-cyber/index.html",
+    "main.be4bd425.css.map": "/company-profile-cyber/static/css/main.be4bd425.css.map",
+    "main.c52fc220.js.map": "/company-profile-cyber/static/js/main.c52fc220.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.be4bd425.css",
+    "static/js/main.c52fc220.js"
+  ]
+}
