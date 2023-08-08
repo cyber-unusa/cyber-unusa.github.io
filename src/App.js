@@ -6,6 +6,7 @@ import Member from './Component/Member';
 import Login from './Component/Login';
 import { Services } from './Component/Services';
 import CoomingSoon from './UI/CoomingSoon';
+import Workshop from './UI/Workshop';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <Route path='/login' element={<Login />} />
         <Route path='/services' element={<Services/>}/>
         <Route path='/cooming' element={<CoomingSoon/>}/>
+        <Route path='/workshopadscyber' element={<Workshop />}/>
       </Routes>
     </div>
   );
