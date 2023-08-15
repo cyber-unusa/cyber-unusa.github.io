@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 
 const Workshop = () => {
 
-    const externalURL = 'http://www.bit.ly/workshopadscyber';
+    const externalURL = 'https://drive.google.com/drive/folders/1TlxL6_cgNy0cgQdCpoOfKTJ7Ool_VGdo?usp=sharing';
     const delayInMillis = 3000; 
 
     useEffect(() => {
