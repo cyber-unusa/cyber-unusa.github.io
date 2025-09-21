@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import Footer from "../UI/Footer";
-import { Navbar } from "../UI/Navbar";
+import Navbar from "../UI/Navbar";
 import {
   money,
   bag,
@@ -13,7 +13,7 @@ import {
   codesBracket,
   rocket,
   icons1,
-} from "../../assets/data/Icons";
+} from "../../assets/Icons";
 
 export const Services = () => {
   return (

@@ -1,8 +1,7 @@
-import { dokumenter } from "../../assets/data/dokumenter";
+import { dokumenter } from "../../assets/dokumenter";
 import { Link } from "react-router-dom";
 
 export default function Dokumenter() {
-
   return (
     <div className="bg-secbg lg:py-8">
       <h2 className="text-3xl lg:text-2xl font-bold text-center mb-16 text-primary pt-8 font-rubik">
@@ -35,4 +34,3 @@ export default function Dokumenter() {
     </div>
   );
 }
-

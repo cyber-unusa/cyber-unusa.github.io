@@ -6,18 +6,23 @@ import Member from "./Components/pages/Member";
 import Login from "./Components/pages/Login";
 import { Services } from "./Components/pages/Services";
 import CoomingSoon from "./Components/UI/CoomingSoon";
+import { ToastContainer } from "react-toastify";
+import { AppContextProvider } from "./context/appContext.jsx";
 
 function App() {
   return (
     <div className="App">
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/member" element={<Member />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/services" element={<Services />} />
-        <Route path="/cooming" element={<CoomingSoon />} />
-      </Routes>
+      <AppContextProvider>
+        <ToastContainer />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/member" element={<Member />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/services" element={<Services />} />
+          <Route path="/cooming" element={<CoomingSoon />} />
+        </Routes>
+      </AppContextProvider>
     </div>
   );
 }

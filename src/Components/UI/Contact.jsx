@@ -1,4 +1,4 @@
-import { discord, gmail, instagram, youtube } from "../../assets/data/Icons";
+import { discord, gmail, instagram, youtube } from "../../assets/Icons";
 
 export default function Contact() {
   const copas = () => {

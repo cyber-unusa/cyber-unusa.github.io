@@ -1,68 +1,153 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React, { useContext, useState } from "react";
+import { assets } from "../../assets/assets";
+import { useNavigate } from "react-router-dom";
+import { AppContext } from "../../context/appContext";
+import axios from "axios";
+import { toast } from "react-toastify";
+import { Mail, Lock, User } from "lucide-react";
 
-const Login = () => {
+export default function Login() {
+  const navigate = useNavigate();
+
+  const { backendUrl, setIsLoggedin, getUserData } = useContext(AppContext);
+
+  const [state, setState] = useState("Login");
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+
+  const onSubmitHandler = async (e) => {
+    try {
+      e.preventDefault();
+
+      axios.defaults.withCredentials = true;
+
+      if (state === "Sign Up") {
+        const { data } = await axios.post(backendUrl + "/api/auth/register", {
+          name,
+          email,
+          password,
+        });
+        if (data.success) {
+          setIsLoggedin(true);
+          getUserData();
+          navigate("/");
+          toast.success(data.message);
+        } else {
+          toast.error(data.message);
+        }
+      } else {
+        const { data } = await axios.post(backendUrl + "/api/auth/login", {
+          email,
+          password,
+        });
+        if (data.success) {
+          setIsLoggedin(true);
+          getUserData();
+          navigate("/");
+          toast.success(data.message);
+        } else {
+          toast.error(data.message);
+        }
+      }
+    } catch (error) {
+      toast.error(error.message);
+    }
+  };
+
   return (
-    <div>
-      <div className="container relative">
-        <div className="w-80 shadow-xl mx-auto rounded-md mt-16 lg:mt-4 lg:w-96 ">
-          <img src="/asset/logo.png" alt="p" className="mx-auto w-36 mt-16" />
-          <img
-            src="/asset/vector/v3.png"
-            alt="vector"
-            className="hidden lg:block absolute -top-24 right-0 w-[560px]"
-          />
-          <img
-            src="/asset/vector/v4.png"
-            alt="vector"
-            className="hidden lg:block absolute -bottom-[93px] left-0 w-72"
-          />
-          <form action="post">
-            <div className="p-4">
-              <label
-                htmlFor="uname"
-                className="block text-gray-700 font-bold mb-1"
-              >
-                NIM:{" "}
-              </label>
-              <input
-                type="text"
-                name="uname"
-                id="uname"
-                className="peer h-full w-full border-b border-primary bg-transparent pt-4 pb-1.5 font-sans text-sm font-normal text-blue-gray-700 outline outline-0 transition-all placeholder-shown:border-blue-gray-200 focus:border-yel focus:outline-0 disabled:border-0 disabled:bg-blue-gray-50 mb-8"
-              />
-              <label
-                htmlFor="pass"
-                className="block text-gray-700 font-bold mb-1"
-              >
-                Password:{" "}
-              </label>
-              <input
-                type="password"
-                name="pass"
-                id="pass"
-                className="peer h-full w-full border-b border-primary bg-transparent pt-4 pb-1.5 font-sans text-sm font-normal text-blue-gray-700 outline outline-0 transition-all placeholder-shown:border-blue-gray-200 focus:border-yel focus:outline-0 disabled:border-0 disabled:bg-blue-gray-50"
-              />
-            </div>
-            <div className="text-right">
-              <Link
-                href="#"
-                className="text-right font-semibold text-lowprim pr-4"
-              >
-                Forgot password?
-              </Link>
-            </div>
+    <div className="flex items-center justify-center min-h-screen px-6 sm:px-0 bg-gradient-to-br from-blue-200 to-green-300">
+      <img
+        onClick={() => navigate("/")}
+        src={assets.cyber_logo}
+        alt=""
+        className="absolute items-center sm:left-15 top-5 w-24 cursor-pointer"
+      />
 
-            <Link to="/cooming">
-              <button className="py-2 px-8 m-4 ml-20 lg:ml-36 mt-8 text-base font-bold rounded-full text-white bg-primary hover:shadow-lg hover:opacity-90 transition duration-300 ease-in-out">
-                Login
-              </button>
-            </Link>
-          </form>
-        </div>
+      <div className="bg-slate-800 p-10 rounded-lg shadow-lg w-96 sm:w-96 text-green-300 text-sm">
+        <h2 className="text-3xl font-semibold text-white text-center mb-3">
+          {state === "Login" ? "Selamat Datang" : "Registrasi"}
+        </h2>
+        <p className="text-center text-sm mb-6">
+          {state === "Login" ? "Masukan Ke Akun Anda" : "Daftarkan Akun Anda"}
+        </p>
+
+        <form onSubmit={onSubmitHandler}>
+          {state === "Sign Up" && (
+            <div className="mb-4 flex items-center gap-3 w-full px-5 py-2.5 rounded-full bg-[#0d6c5b]">
+              <User color="white" size={20} strokeWidth={1.5} />
+              <input
+                onChange={(e) => setName(e.target.value)}
+                value={name}
+                className="bg-transparent outline-none text-white"
+                type="text"
+                placeholder="Masukkan Nama Lengkap"
+                required
+              />
+            </div>
+          )}
+
+          <div className="mb-4 flex items-center gap-3 w-full px-5 py-2.5 rounded-full bg-[#0d6c5b]">
+            <Mail color="white" size={20} strokeWidth={1.5} />
+            <input
+              onChange={(e) => setEmail(e.target.value)}
+              value={email}
+              className="bg-transparent outline-none text-white"
+              type="email"
+              placeholder="Masukkan Email"
+              required
+            />
+          </div>
+
+          <div className="mb-4 flex items-center gap-3 w-full px-5 py-2.5 rounded-full bg-[#0d6c5b]">
+            <Lock color="white" size={20} strokeWidth={1.5} />
+            <input
+              onChange={(e) => setPassword(e.target.value)}
+              value={password}
+              className="bg-transparent outline-none text-white"
+              type="password"
+              placeholder="Masukkan Password"
+              required
+            />
+          </div>
+
+          <p
+            onClick={() => navigate("/reset-password")}
+            className="mb-4 text-green-500 cursor-pointer"
+          >
+            Lupa Kata Sandi?
+          </p>
+
+          <button
+            onSubmit={null}
+            className="w-full py-2.5 rounded-full bg-gradient-to-r from-green-400 to-green-600 text-white font-medium cursor-pointer"
+          >
+            {state}
+          </button>
+        </form>
+
+        {state === "Sign Up" ? (
+          <p className="text-gray-400 text-center text-xs mt-4">
+            Sudah Punya Akun? {"  "}{" "}
+            <span
+              className="text-blue-400 cursor-pointer underline"
+              onClick={() => setState("Login")}
+            >
+              Login Disini
+            </span>
+          </p>
+        ) : (
+          <p className="text-gray-400 text-center text-xs mt-2">
+            Belum Punya Akun? {"  "}{" "}
+            <span
+              className="text-blue-400 cursor-pointer underline"
+              onClick={() => setState("Sign Up")}
+            >
+              Daftar Disini
+            </span>
+          </p>
+        )}
       </div>
     </div>
   );
-};
-
-export default Login;
+}

@@ -1,43 +1,52 @@
-import { Link } from "react-router-dom";
+import React, { useContext } from "react";
+import { assets } from "../../assets/assets";
+import { AppContext } from "../../context/appContext";
+import { useNavigate } from "react-router-dom";
+import { ArrowRight } from "lucide-react";
 
 export default function HeroSection() {
-  return (
-    <div className="container">
-      <div className="flex flex-wrap flex-row-reverse">
-        <div className="w-full self-center px-4 lg:w-1/2">
-          <h1 className="text-2xl lg:text-5xl font-bold text-primary font-rubik">
-            UKM <span className="block font-bold">CYBER UNUSA</span>
-          </h1>
-          <h2 className="font-semibold text-lowprim mb-5 text-md font-nunito">
-            UNIVERSITAS NAHDLATUL ULAMA SURABAYA
-          </h2>
-          <p className="font-base lg:text-md mb-10 font-poppin">
-            UKM CYBER merupakan sebuah wadah bagi mahasiswa UNUSA untuk
-            mempelajari tentang dunia teknologi baik itu web developer, jaringan
-            komputer, AR/VR, dan masih banyak lagi. wadah ini digunakan untuk
-            mempersiapkan lulusan-lulusan yang tentunya siap kerja dan tidak
-            ketinggalan zaman.
-          </p>
+  const { userData } = useContext(AppContext);
+  const navigate = useNavigate();
 
-          <Link to="/about">
-            <button className="py-3 px-4 text-base font-bold rounded-lg text-white bg-lowprim hover:shadow-lg hover:opacity-90 transition duration-300 ease-in-out font-poppin">
-              Read More
-            </button>
-          </Link>
-        </div>
-        <div className="w-full self-end px-4 lg:w-1/2">
-          <div className="mt-10 relative">
-            <img
-              src="asset/people/ukm.png"
-              alt="ukm cyber"
-              className="max-w-full mx-auto"
-            />
-            <span className="absolute -bottom-16 -z-10 left-1/2 -translate-x-1/2 w-10/12 lg:w-10/12">
-              <img src="asset/vector/v0.png" alt="ukm cyber" />
-            </span>
-          </div>
-        </div>
+  return (
+    <section
+      className="relative w-full min-h-screen flex items-center justify-center bg-cover bg-center z-0"
+      style={{
+        backgroundImage: `url(${assets.heroSection})`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+      }}
+      aria-label="Hero Section"
+    >
+      <div className="absolute inset-0 bg-[#0d2f4a]/70" aria-hidden="true" />
+      <div className="relative flex flex-col items-center justify-center w-full max-w-xl px-4 py-20 sm:py-32 text-center text-white isolate overflow-hidden">
+        <h1 className="flex items-center gap-2 text-xl sm:text-3xl font-semibold mb-2">
+          Hallo{" "}
+          <span className="font-semibold">
+            {userData ? userData.name : "Coders"}
+          </span>
+          !{" "}
+          <span role="img" aria-label="Waving Hand">
+            👋
+          </span>
+        </h1>
+        <h2 className="text-3xl sm:text-5xl font-semibold mb-4">
+          Selamat Datang di Web Cyber Unusa
+        </h2>
+        <p className="mb-7 max-w-md">
+          UKM CYBER merupakan sebuah wadah bagi mahasiswa UNUSA untuk
+          mempelajari tentang dunia teknologi baik itu web developer, jaringan
+          komputer, AR/VR, dan masih banyak lagi.
+        </p>
+        <button
+          onClick={() => navigate("/about")}
+          className="border border-green-500 rounded-full px-8 py-2.5 hover:bg-green-100 hover:text-gray-800 transition-all flex items-center focus:outline-none focus:ring-2 focus:ring-green-400 focus:ring-offset-2"
+          aria-label="Read more about Cyber"
+        >
+          Read More
+          <ArrowRight className="ml-2" size={20} strokeWidth={1.5} />
+        </button>
       </div>
-    </div>
+    </section>
   );
 }

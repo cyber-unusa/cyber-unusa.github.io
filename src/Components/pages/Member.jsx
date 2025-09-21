@@ -1,5 +1,5 @@
 import React, { useRef } from "react";
-import { Navbar } from "../UI/Navbar";
+import Navbar from "../UI/Navbar";
 import Footer from "../UI/Footer";
 import { SliderMember } from "../UI/SliderMember";
 import {
@@ -7,7 +7,7 @@ import {
   cyberBerbagi,
   cyberEvent,
   cyberMengajar,
-} from "../../assets/data/dataMember";
+} from "../../assets/dataMember";
 
 const Member = () => {
   const ref = useRef(null);

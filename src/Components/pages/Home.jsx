@@ -1,4 +1,4 @@
-import { Navbar } from "../UI/Navbar";
+import Navbar from "../UI/Navbar";
 import Footer from "../UI/Footer";
 import Dokumenter from "../UI/Dokumenter";
 import Contact from "../UI/Contact";
@@ -12,7 +12,7 @@ const Home = () => {
       <Navbar />
 
       {/* Hero section */}
-      <section id="home" className="pt-2 mt-24 lg:mt-14">
+      <section id="home" className="pt-2 mt-14">
         <HeroSection />
       </section>
 

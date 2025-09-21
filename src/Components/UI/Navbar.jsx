@@ -1,78 +1,279 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import React, { useContext, useState, useRef, useEffect } from "react";
+import { assets } from "../../assets/assets";
+import { useNavigate } from "react-router-dom";
+import { AppContext } from "../../context/appContext";
+import axios from "axios";
+import { toast } from "react-toastify";
+// import DropDownMenu from "./DropDownMenu";
 
-export const Navbar = () => {
-  let links = [
-    { name: "HOME", link: "/" },
-    { name: "ABOUT", link: "/about" },
-    { name: "SERVICES", link: "/services" },
-    { name: "MEMBER", link: "/member" },
+export default function Navbar() {
+  // Hooks & Context
+  const navigate = useNavigate();
+  const { userData, backendUrl, setUserData, setIsLoggedin } =
+    useContext(AppContext);
+  const [dropdownOpen, setDropdownOpen] = useState(false);
+  const [mobileMenu, setMobileMenu] = useState(false);
+  const [loadingLogout, setLoadingLogout] = useState(false);
+  const dropdownRef = useRef(null);
+
+  // Close dropdown when clicking outside
+  useEffect(() => {
+    if (!dropdownOpen) return;
+    function handleClickOutside(event) {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+        setDropdownOpen(false);
+      }
+    }
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [dropdownOpen]);
+
+  // Handlers
+  const handleNavigate = (path) => {
+    navigate(path);
+    setMobileMenu(false);
+  };
+
+  const handleDropdownToggle = () => setDropdownOpen((prev) => !prev);
+
+  const handleMobileMenuToggle = () => setMobileMenu((prev) => !prev);
+
+  // Logout handler, can close dropdown and mobile menu if needed
+  const handleLogout = async (options = {}) => {
+    setLoadingLogout(true);
+    try {
+      axios.defaults.withCredentials = true;
+      const { data } = await axios.post(backendUrl + "/api/auth/logout");
+      if (data.success) {
+        setIsLoggedin(false);
+        setUserData(false);
+        toast.success(data.message);
+        setDropdownOpen(false);
+        setMobileMenu(false);
+        navigate("/");
+      }
+    } catch (error) {
+      toast.error(error.message);
+      setDropdownOpen(false);
+      setMobileMenu(false);
+    } finally {
+      setLoadingLogout(false);
+    }
+  };
+
+  // Menu item data
+  const menuItems = [
+    { label: "Home", path: "/" },
+    { label: "About", path: "/about" },
+    { label: "Services", path: "/services" },
+    { label: "Member", path: "/member" },
   ];
 
-  let [open, setOpen] = useState(false);
-
+  // Render
   return (
-    <>
-      <div className="z-0 mb-12">
-        <div className="shadow-md w-full fixed top-0 left-0 z-20">
-          <div className="md:flex items-center justify-between bg-white py-1 md:px-10 px-7">
-            <div className="font-bold text-2xl cursor-pointer flex items-center">
-              <img
-                src="/asset/cyber-logo.png"
-                alt="logo"
-                className="w-16 pl-2"
-              />
-              <h1 className="lg:ml-4 max-sm:m-auto sm:m-auto text-primary">
-                CYBER UNUSA
-              </h1>
-            </div>
-            <div
-              className="text-3xl absolute right-8 top-6 cursor-pointer md:hidden"
-              onClick={() => setOpen(!open)}
+    <nav className="bg-white dark:bg-gray-900 fixed w-full z-20 top-0 start-0 border-b border-gray-200 dark:border-gray-600 px-4 sm:px-6">
+      <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+        {/* Logo & Title */}
+        <div
+          className="flex items-center space-x-3 rtl:space-x-reverse cursor-pointer"
+          onClick={() => navigate("/")}
+        >
+          <img src={assets.cyber_logo} alt="" className="h-10" />
+          <span className="text-xl self-center font-semibold whitespace-nowrap bg-gradient-to-r from-green-400 via-blue-500 to-green-400 bg-clip-text text-transparent">
+            UKM Cyber Unusa
+          </span>
+        </div>
+
+        {/* Desktop menu */}
+        <div className="hidden md:flex space-x-8 md:order-1 text-white">
+          {menuItems.map((item) => (
+            <button
+              key={item.path}
+              type="button"
+              className="hover:text-green-800 relative pb-2"
+              onClick={() => navigate(item.path)}
             >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                strokeWidth="1.5"
-                stroke="currentColor"
-                className="w-6 h-6"
-                name={open ? "close" : "menu"}
-              >
+              {item.label}
+              <span
+                className={`absolute left-0 -bottom-0.5 w-full h-0.5 ${
+                  window.location.pathname === item.path ? "bg-green-500" : ""
+                }`}
+              ></span>
+            </button>
+          ))}
+        </div>
+
+        {/* Mobile Menu Ketika Sudah Login */}
+        <div className="md:hidden flex items-center space-x-2">
+          <button
+            onClick={handleMobileMenuToggle}
+            className="inline-flex items-center justify-center p-2 rounded-full bg-gray-800 text-white focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-600"
+            aria-label="Toggle menu"
+          >
+            <svg
+              className="h-6 w-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              {mobileMenu ? (
                 <path
                   strokeLinecap="round"
                   strokeLinejoin="round"
-                  d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+                  strokeWidth={2}
+                  d="M6 18L18 6M6 6l12 12"
                 />
-              </svg>
-            </div>
-
-            <ul
-              className={`md:flex md:items-center md:pb-0 pb-12 absolute md:static bg-white md:z-auto z-[-1] left-0 w-full md:w-auto md:pl-0 pl-9 transition-all duration-500 ease-in ${
-                open ? "top-16" : "top-[-490px]"
-              } `}
-            >
-              {links.map((link) => (
-                <li
-                  key={link.name}
-                  className="md:ml-6 text-lg font-semibold md:my-0 my-7"
+              ) : (
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M4 6h16M4 12h16M4 18h16"
+                />
+              )}
+            </svg>
+          </button>
+          {userData && (
+            <div className="relative">
+              <button
+                type="button"
+                className="flex text-sm bg-gray-800 rounded-full focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-600"
+                id="user-menu-button-mobile"
+                aria-expanded={dropdownOpen}
+                onClick={handleDropdownToggle}
+              >
+                <div className="w-8 h-8 rounded-full bg-green-600 text-white text-xl p-0.5 flex items-center justify-center">
+                  {userData.name[0].toUpperCase()}
+                </div>
+                <span className="sr-only">Open user menu</span>
+              </button>
+              {dropdownOpen && (
+                <div
+                  ref={dropdownRef}
+                  className="z-50 absolute right-0 mt-2 w-64 text-base bg-white dark:bg-gray-900 rounded-2xl shadow-2xl border border-gray-200 dark:border-gray-700 transition-all duration-200 animate-fadeIn"
+                  style={{ top: "calc(100% + 8px)" }}
+                  id="user-dropdown-mobile"
                 >
-                  <Link to={`${link.link}`}>
-                    <p className="text-gray-800 hover:text-gray-400 duration-500">
-                      {link.name}
-                    </p>
-                  </Link>
-                </li>
-              ))}
-              <Link to="/login">
-                <button className="px-3 py-2 md:ml-6 font-semibold bg-[#13A085] text-white rounded-md hover:shadow-lg hover:opacity-90 transition duration-300 ease-in-out">
-                  LOGIN
-                </button>
-              </Link>
-            </ul>
-          </div>
+                  <div className="px-6 py-5 border-b border-gray-100 dark:border-gray-700">
+                    <span className="block text-lg font-bold text-gray-900 dark:text-white mb-1">
+                      {userData.name}
+                    </span>
+                    <span className="block text-xs text-gray-500 truncate dark:text-gray-400">
+                      {userData.email}
+                    </span>
+                  </div>
+                  <ul className="py-2">
+                    <li>
+                      <button
+                        onClick={async () => {
+                          if (loadingLogout) return;
+                          await handleLogout();
+                        }}
+                        disabled={loadingLogout}
+                        className={`w-full text-left px-5 py-2 text-sm text-red-600 hover:bg-red-50 dark:hover:bg-gray-700 rounded-b-xl transition-colors ${
+                          loadingLogout ? "opacity-60 cursor-not-allowed" : ""
+                        }`}
+                      >
+                        {loadingLogout ? "Logging out..." : "Logout"}
+                      </button>
+                    </li>
+                  </ul>
+                </div>
+              )}
+            </div>
+          )}
         </div>
+
+        {/* User menu & Login button (desktop) */}
+        {userData ? (
+          <div className="hidden md:flex items-center md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
+            <div className="relative">
+              <button
+                type="button"
+                className="flex text-sm bg-gray-800 rounded-full md:me-0 focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-600"
+                id="user-menu-button"
+                aria-expanded={dropdownOpen}
+                onClick={handleDropdownToggle}
+              >
+                <div className="w-8 h-8 rounded-full bg-green-600 text-white text-xl p-0.5 flex items-center justify-center">
+                  {userData.name[0].toUpperCase()}
+                </div>
+                <span className="sr-only">Open user menu</span>
+              </button>
+              {dropdownOpen && (
+                <div
+                  ref={dropdownRef}
+                  className="z-50 absolute top-10 right-6 my-4 w-56 text-base bg-white dark:bg-gray-800 rounded-xl shadow-lg border border-gray-200 dark:border-gray-700 transition-all duration-200 animate-fadeIn"
+                  id="user-dropdown"
+                >
+                  <div className="px-5 py-4 border-b border-gray-100 dark:border-gray-700">
+                    <span className="block text-base font-semibold text-gray-900 dark:text-white mb-1">
+                      {userData.name}
+                    </span>
+                    <span className="block text-xs text-gray-500 truncate dark:text-gray-400">
+                      {userData.email}
+                    </span>
+                  </div>
+                  <ul className="py-2">
+                    <li>
+                      <button
+                        onClick={async () => {
+                          if (loadingLogout) return;
+                          await handleLogout();
+                        }}
+                        disabled={loadingLogout}
+                        className={`w-full text-left px-5 py-2 text-sm text-red-600 hover:bg-red-50 dark:hover:bg-gray-700 rounded-b-xl transition-colors ${
+                          loadingLogout ? "opacity-60 cursor-not-allowed" : ""
+                        }`}
+                      >
+                        {loadingLogout ? "Logging out..." : "Logout"}
+                      </button>
+                    </li>
+                  </ul>
+                </div>
+              )}
+            </div>
+          </div>
+        ) : (
+          <button
+            onClick={() => navigate("/login")}
+            className="hidden md:flex items-center gap-2 md:order-2 border border-green-500 rounded-full px-6 py-2 text-green-800 hover:bg-green-100 transition-all"
+          >
+            Login
+          </button>
+        )}
+
+        {/* Mobile menu dropdown */}
+        {mobileMenu && (
+          <div className="md:hidden bg-white text-white dark:bg-gray-900 px-4 pt-2 pb-4 space-y-1 shadow-lg border-b border-gray-200 dark:border-gray-700">
+            {menuItems.map((item) => (
+              <button
+                key={item.path}
+                onClick={() => handleNavigate(item.path)}
+                className={`block w-full text-left px-3 py-2 rounded hover:bg-green-100 dark:hover:bg-gray-700 ${
+                  window.location.pathname === item.path
+                    ? "text-green-600 font-semibold"
+                    : ""
+                }`}
+              >
+                {item.label}
+              </button>
+            ))}
+            {/* Show Login button in mobile menu if not logged in */}
+            {!userData && (
+              <button
+                onClick={() => handleNavigate("/login")}
+                className="block w-full text-left px-3 py-2 rounded border border-green-500 text-green-800 hover:bg-green-100 mt-2"
+              >
+                Login
+              </button>
+            )}
+          </div>
+        )}
       </div>
-    </>
+    </nav>
   );
-};
+}
