@@ -13,7 +13,6 @@ export default function Navbar() {
     useContext(AppContext);
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const [mobileMenu, setMobileMenu] = useState(false);
-  const [loadingLogout, setLoadingLogout] = useState(false);
   const dropdownRef = useRef(null);
 
   // Close dropdown when clicking outside
@@ -41,8 +40,7 @@ export default function Navbar() {
   const handleMobileMenuToggle = () => setMobileMenu((prev) => !prev);
 
   // Logout handler, can close dropdown and mobile menu if needed
-  const handleLogout = async (options = {}) => {
-    setLoadingLogout(true);
+  const handleLogout = async () => {
     try {
       axios.defaults.withCredentials = true;
       const { data } = await axios.post(backendUrl + "/api/auth/logout");
@@ -58,8 +56,6 @@ export default function Navbar() {
       toast.error(error.message);
       setDropdownOpen(false);
       setMobileMenu(false);
-    } finally {
-      setLoadingLogout(false);
     }
   };
 
@@ -73,7 +69,7 @@ export default function Navbar() {
 
   // Render
   return (
-    <nav className="bg-white dark:bg-gray-900 fixed w-full z-20 top-0 start-0 border-b border-gray-200 dark:border-gray-600 px-4 sm:px-6">
+    <nav className="bg-white dark:bg-gray-900 fixed top-0 left-0 w-full z-20 border-b border-gray-200 dark:border-gray-600 px-4 sm:px-6">
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
         {/* Logo & Title */}
         <div
@@ -87,12 +83,12 @@ export default function Navbar() {
         </div>
 
         {/* Desktop menu */}
-        <div className="hidden md:flex space-x-8 md:order-1 text-white">
+        <div className="hidden md:flex space-x-8 md:order-1">
           {menuItems.map((item) => (
             <button
               key={item.path}
               type="button"
-              className="hover:text-green-800 relative pb-2"
+              className="text-white hover:text-green-800 relative pb-2"
               onClick={() => navigate(item.path)}
             >
               {item.label}
@@ -109,7 +105,7 @@ export default function Navbar() {
         <div className="md:hidden flex items-center space-x-2">
           <button
             onClick={handleMobileMenuToggle}
-            className="inline-flex items-center justify-center p-2 rounded-full bg-gray-800 text-white focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-600"
+            className="inline-flex items-center justify-center p-2 rounded-full text-white hover:text-green-800"
             aria-label="Toggle menu"
           >
             <svg
@@ -168,16 +164,15 @@ export default function Navbar() {
                   <ul className="py-2">
                     <li>
                       <button
-                        onClick={async () => {
-                          if (loadingLogout) return;
-                          await handleLogout();
-                        }}
-                        disabled={loadingLogout}
-                        className={`w-full text-left px-5 py-2 text-sm text-red-600 hover:bg-red-50 dark:hover:bg-gray-700 rounded-b-xl transition-colors ${
-                          loadingLogout ? "opacity-60 cursor-not-allowed" : ""
-                        }`}
+                        onClick={() =>
+                          handleLogout({
+                            closeDropdown: true,
+                            closeMobileMenu: true,
+                          })
+                        }
+                        className="block px-4 py-2 text-sm text-red-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white"
                       >
-                        {loadingLogout ? "Logging out..." : "Logout"}
+                        Logout
                       </button>
                     </li>
                   </ul>
@@ -220,16 +215,23 @@ export default function Navbar() {
                   <ul className="py-2">
                     <li>
                       <button
-                        onClick={async () => {
-                          if (loadingLogout) return;
-                          await handleLogout();
-                        }}
-                        disabled={loadingLogout}
-                        className={`w-full text-left px-5 py-2 text-sm text-red-600 hover:bg-red-50 dark:hover:bg-gray-700 rounded-b-xl transition-colors ${
-                          loadingLogout ? "opacity-60 cursor-not-allowed" : ""
-                        }`}
+                        onClick={() =>
+                          handleLogout({
+                            closeDropdown: true,
+                            closeMobileMenu: true,
+                          })
+                        }
+                        className="block px-4 py-2 text-sm text-red-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white"
                       >
-                        {loadingLogout ? "Logging out..." : "Logout"}
+                        Logout
+                      </button>
+                    </li>
+                    <li>
+                      <button
+                        onClick={() => navigate("/dashboard")}
+                        className="block px-4 py-2 text-sm text-white hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white"
+                      >
+                        Dashboard
                       </button>
                     </li>
                   </ul>
@@ -240,7 +242,7 @@ export default function Navbar() {
         ) : (
           <button
             onClick={() => navigate("/login")}
-            className="hidden md:flex items-center gap-2 md:order-2 border border-green-500 rounded-full px-6 py-2 text-green-800 hover:bg-green-100 transition-all"
+            className="hidden md:flex items-center md:order-2 border border-green-500 rounded-full px-6 py-2 text-white hover:text-black hover:bg-green-100 transition-all"
           >
             Login
           </button>
@@ -266,7 +268,7 @@ export default function Navbar() {
             {!userData && (
               <button
                 onClick={() => handleNavigate("/login")}
-                className="block w-full text-left px-3 py-2 rounded border border-green-500 text-green-800 hover:bg-green-100 mt-2"
+                className="block w-full text-left px-3 py-2 rounded border border-green-500 text-white hover:text-black hover:bg-green-100 mt-2"
               >
                 Login
               </button>

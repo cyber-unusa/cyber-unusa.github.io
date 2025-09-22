@@ -91,7 +91,7 @@ export default function Pengurus() {
       <div className="container mx-auto">
         {/* Judul dan deskripsi BPH */}
         <div className="text-center mb-10">
-          <h2 className="text-4xl font-bold text-green-600 mb-4">
+          <h2 className="text-4xl font-bold text-green-600 mb-4 mx-5">
             Badan Pengurus Cyber
           </h2>
         </div>
@@ -108,14 +108,14 @@ export default function Pengurus() {
           <div className="inline-block mb-4 bg-orange-100 text-orange-800 px-4 py-2 rounded-full text-sm font-semibold">
             Devisi Cyber
           </div>
-          <p className="text-gray-600 max-w-2xl mx-auto">
-            Devisi kami terdiri dari individu berpengalaman di berbagai
-            bidang yang siap membantu mewujudkan visi dan misi UKM Cyber.
+          <p className="text-gray-600 max-w-2xl mx-5 sm:mx-auto">
+            Devisi kami terdiri dari individu berpengalaman di berbagai bidang
+            yang siap membantu mewujudkan visi dan misi UKM Cyber.
           </p>
         </div>
 
         {/* Devisi Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
           {devisiList.map((item, idx) => (
             <DevisiCard key={idx} {...item} />
           ))}

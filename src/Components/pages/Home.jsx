@@ -1,7 +1,6 @@
 import Navbar from "../UI/Navbar";
 import Footer from "../UI/Footer";
 import Dokumenter from "../UI/Dokumenter";
-import Contact from "../UI/Contact";
 import HeroSection from "../UI/HeroSection";
 import Pengurus from "../UI/Pengurus";
 import Event from "../UI/Event";
@@ -17,7 +16,7 @@ const Home = () => {
       </section>
 
       {/* Pengurus Inti */}
-      <section id="pengurus" className="pt-36 pb-32">
+      <section id="pengurus" className="pt-32 pb-32">
         <Pengurus />
       </section>
 
@@ -29,11 +28,6 @@ const Home = () => {
       {/* Dokumenter */}
       <section id="dokumenter" className="pt-36 pb-32">
         <Dokumenter />
-      </section>
-
-      {/* Contact US */}
-      <section id="contact" className="pt-8 pb-32">
-        <Contact />
       </section>
 
       <Footer />
