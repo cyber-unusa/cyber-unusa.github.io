@@ -19,7 +19,7 @@ jobs:
     # Langkah-langkah (steps) yang akan dieksekusi secara berurutan
     steps:
       # Langkah 1: Mengunduh kode dari repositori Anda ke mesin virtual
-      - name: Checkout 🛎️
+      - name: Checkout brench 📥
         uses: actions/checkout@v4 # Menggunakan Action siap pakai dari marketplace
 
       # Langkah 2: Menginstal Node.js, dependencies, dan build project
