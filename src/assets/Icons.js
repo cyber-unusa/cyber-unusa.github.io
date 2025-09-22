@@ -27,7 +27,7 @@ export const youtube = () => {
       <svg
         role="img"
         className="fill-current"
-        width="52"
+        width="25"
         viewBox="0 0 24 24"
         xmlns="http://www.w3.org/2000/svg"
       >
@@ -43,7 +43,7 @@ export const instagram = () => {
     <>
       <svg
         className="fill-current"
-        width="52"
+        width="25"
         role="img"
         viewBox="0 0 24 24"
         xmlns="http://www.w3.org/2000/svg"
@@ -60,7 +60,7 @@ export const discord = () => {
     <>
       <svg
         className="fill-current"
-        width="52"
+        width="25"
         role="img"
         viewBox="0 0 24 24"
         xmlns="http://www.w3.org/2000/svg"
@@ -77,7 +77,7 @@ export const gmail = () => {
     <>
       <svg
         className="fill-current"
-        width="52"
+        width="25"
         role="img"
         viewBox="0 0 24 24"
         xmlns="http://www.w3.org/2000/svg"
