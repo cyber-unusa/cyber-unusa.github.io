@@ -35,7 +35,7 @@ jobs:
           
       # Langkah 3: Melakukan deploy ke branch gh-pages
       - name: Deploy 🚀
-        uses: JamesIves/github-pages-deploy-action@v4.6.3
+        uses: Cyber/github-pages-deploy-action@v4.6.3
         with:
           branch: gh-pages # Branch tujuan untuk deploy
           folder: build   # Folder yang akan di-deploy (hasil dari 'npm run build')
