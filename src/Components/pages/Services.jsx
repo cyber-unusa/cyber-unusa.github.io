@@ -20,7 +20,7 @@ export const Services = () => {
     <>
       <Navbar />
       <section id="head" className="">
-        <div className="container px-4 lg:px-16 pb-12 flex flex-col lg:flex-row">
+        <div className="container px-4 lg:px-16 pb-12 flex flex-col lg:flex-row mt-12">
           <div className="contens md:w-1/2 lg:w-2/4 pt-10 md:pt-20 lg:pt-36">
             <h1 className="max-sm:text-4xl sm:text-4xl md:text-4xl lg:text-5xl font-bold text-primary">
               PERLU
