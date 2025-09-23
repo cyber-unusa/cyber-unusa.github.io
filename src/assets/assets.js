@@ -25,6 +25,24 @@ export const bph = {
     jabatan: "Wakil Ket. Umum",
     foto: "asset/bph/ucup.jpg",
   },
+  sekre1: {
+    id: 4,
+    nama: "Karin Galuh Dea Pramesti",
+    jabatan: "Sekretaris 1",
+    foto: "asset/bph/karin.jpg",
+  },
+  sekre2: {
+    id: 5,
+    nama: "Alifah Hidayatul Maftuhah",
+    jabatan: "Sekretaris 2",
+    foto: "asset/bph/alifa.jpg",
+  },
+  bendahara: {
+    id: 6,
+    nama: "Siti Alfiatul Makiah",
+    jabatan: "Bendahara Umum",
+    foto: "asset/bph/fia.jpg",
+  }
 };
 
 export const kadiv = {
@@ -45,7 +63,7 @@ export const kadiv = {
   },
   inovation: {
     nama: "Novandra Wichda Farun",
-    jabatan: "Kadiv. Innovation Entrepreneur",
+    jabatan: "Kadiv. Innovation & Entrepreneur",
     foto: "asset/kadiv/vandra.jpg",
   },
 };

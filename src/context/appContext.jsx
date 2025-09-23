@@ -7,7 +7,9 @@ export const AppContext = createContext();
 export const AppContextProvider = ({ children }) => {
   axios.defaults.withCredentials = true;
 
-  const backendUrl = process.env.REACT_APP_BACKEND_URL;
+  const backendUrl =
+    process.env.REACT_APP_BACKEND_URL ||
+    "https://server-cyber-unusa-github-io.vercel.app";
   const [isLoggedin, setIsLoggedin] = useState(false);
   const [userData, setUserData] = useState(false);
 
