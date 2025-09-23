@@ -69,7 +69,7 @@ export default function Navbar() {
 
   // Render
   return (
-    <nav className="bg-white dark:bg-gray-900 fixed top-0 left-0 w-full z-20 border-b border-gray-200 dark:border-gray-600 px-4 sm:px-6">
+    <nav className="bg-gray-900 fixed top-0 left-0 w-full z-20 border-b border-gray-600 px-4 sm:px-6">
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
         {/* Logo & Title */}
         <div
@@ -136,7 +136,7 @@ export default function Navbar() {
             <div className="relative">
               <button
                 type="button"
-                className="flex text-sm bg-gray-800 rounded-full focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-600"
+                className="flex text-sm bg-gray-800 rounded-full focus:ring-4 focus:ring-gray-600"
                 id="user-menu-button-mobile"
                 aria-expanded={dropdownOpen}
                 onClick={handleDropdownToggle}
@@ -149,15 +149,15 @@ export default function Navbar() {
               {dropdownOpen && (
                 <div
                   ref={dropdownRef}
-                  className="z-50 absolute right-0 mt-2 w-64 text-base bg-white dark:bg-gray-900 rounded-2xl shadow-2xl border border-gray-200 dark:border-gray-700 transition-all duration-200 animate-fadeIn"
+                  className="z-50 absolute right-0 mt-2 w-64 text-base bg-gray-900 rounded-2xl shadow-2xl border border-gray-700 transition-all duration-200 animate-fadeIn"
                   style={{ top: "calc(100% + 8px)" }}
                   id="user-dropdown-mobile"
                 >
-                  <div className="px-6 py-5 border-b border-gray-100 dark:border-gray-700">
-                    <span className="block text-lg font-bold text-gray-900 dark:text-white mb-1">
+                  <div className="px-6 py-5 border-b border-gray-700">
+                    <span className="block text-lg font-bold text-white mb-1">
                       {userData.name}
                     </span>
-                    <span className="block text-xs text-gray-500 truncate dark:text-gray-400">
+                    <span className="block text-xs truncate text-gray-400">
                       {userData.email}
                     </span>
                   </div>
@@ -170,7 +170,7 @@ export default function Navbar() {
                             closeMobileMenu: true,
                           })
                         }
-                        className="block px-4 py-2 text-sm text-red-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white"
+                        className="block px-4 py-2 text-sm text-red-700 hover:bg-gray-600"
                       >
                         Logout
                       </button>
@@ -188,7 +188,7 @@ export default function Navbar() {
             <div className="relative">
               <button
                 type="button"
-                className="flex text-sm bg-gray-800 rounded-full md:me-0 focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-600"
+                className="flex text-sm bg-gray-800 rounded-full md:me-0 focus:ring-4 focus:ring-gray-600"
                 id="user-menu-button"
                 aria-expanded={dropdownOpen}
                 onClick={handleDropdownToggle}
@@ -201,14 +201,14 @@ export default function Navbar() {
               {dropdownOpen && (
                 <div
                   ref={dropdownRef}
-                  className="z-50 absolute top-10 right-6 my-4 w-56 text-base bg-white dark:bg-gray-800 rounded-xl shadow-lg border border-gray-200 dark:border-gray-700 transition-all duration-200 animate-fadeIn"
+                  className="z-50 absolute top-10 right-6 my-4 w-56 text-base bg-gray-800 rounded-xl shadow-lg border border-gray-700 transition-all duration-200 animate-fadeIn"
                   id="user-dropdown"
                 >
-                  <div className="px-5 py-4 border-b border-gray-100 dark:border-gray-700">
-                    <span className="block text-base font-semibold text-gray-900 dark:text-white mb-1">
+                  <div className="px-5 py-4 border-b border-gray-700">
+                    <span className="block text-base font-semibold text-white mb-1">
                       {userData.name}
                     </span>
-                    <span className="block text-xs text-gray-500 truncate dark:text-gray-400">
+                    <span className="block text-xs truncate text-gray-400">
                       {userData.email}
                     </span>
                   </div>
@@ -221,7 +221,7 @@ export default function Navbar() {
                             closeMobileMenu: true,
                           })
                         }
-                        className="block px-4 py-2 text-sm text-red-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white"
+                        className="block px-4 py-2 text-sm text-red-700 hover:bg-gray-600"
                       >
                         Logout
                       </button>
@@ -229,7 +229,7 @@ export default function Navbar() {
                     <li>
                       <button
                         onClick={() => navigate("/dashboard")}
-                        className="block px-4 py-2 text-sm text-white hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white"
+                        className="block px-4 py-2 text-sm hover:bg-gray-600 text-gray-200 hover:text-white"
                       >
                         Dashboard
                       </button>
@@ -250,12 +250,12 @@ export default function Navbar() {
 
         {/* Mobile menu dropdown */}
         {mobileMenu && (
-          <div className="md:hidden bg-white text-white dark:bg-gray-900 px-4 pt-2 pb-4 space-y-1 shadow-lg border-b border-gray-200 dark:border-gray-700">
+          <div className="md:hidden text-white bg-gray-900 px-4 pt-2 pb-4 space-y-1 shadow-lg border-b  border-gray-700">
             {menuItems.map((item) => (
               <button
                 key={item.path}
                 onClick={() => handleNavigate(item.path)}
-                className={`block w-full text-left px-3 py-2 rounded hover:bg-green-100 dark:hover:bg-gray-700 ${
+                className={`block w-full text-left px-3 py-2 rounded hover:bg-gray-700 ${
                   window.location.pathname === item.path
                     ? "text-green-600 font-semibold"
                     : ""
