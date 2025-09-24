@@ -15,7 +15,7 @@ import {
   icons1,
 } from "../../assets/Icons";
 
-export const Services = () => {
+export const CyberMart = () => {
   return (
     <>
       <Navbar />

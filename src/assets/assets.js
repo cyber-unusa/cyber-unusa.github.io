@@ -42,7 +42,7 @@ export const bph = {
     nama: "Siti Alfiatul Makiah",
     jabatan: "Bendahara Umum",
     foto: "asset/bph/fia.jpg",
-  }
+  },
 };
 
 export const kadiv = {
@@ -67,3 +67,12 @@ export const kadiv = {
     foto: "asset/kadiv/vandra.jpg",
   },
 };
+
+export const staffPsdm = [
+  {
+    id: 1,
+    nama: "",
+    nim: "",
+    foto: "",
+  },
+];
