@@ -9,7 +9,7 @@ export const AppContextProvider = ({ children }) => {
 
   const backendUrl =
     process.env.REACT_APP_BACKEND_URL ||
-    "https://server-cyber-unusa-github-io.vercel.app";
+    "https://server-cyber-unusa-github-3xe542jca-cyber-unusas-projects.vercel.app";
   const [isLoggedin, setIsLoggedin] = useState(false);
   const [userData, setUserData] = useState(false);
 

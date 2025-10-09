@@ -71,8 +71,109 @@ export const kadiv = {
 export const staffPsdm = [
   {
     id: 1,
-    nama: "",
+    nama: "Fanico Alfa Rizki Safi'i",
+    nim: "3130024015",
+    foto: "asset/staff/psdm/fanico.jpg",
+  },
+  {
+    id: 2,
+    nama: "Hasbi Zikri Ziaul Ishan",
     nim: "",
-    foto: "",
+    foto: "asset/staff/psdm/hasbi.jpg",
+  },
+  {
+    id: 3,
+    nama: "Baidhawi Rizqi Azizy",
+    nim: "",
+    foto: "asset/staff/psdm/baidhawi.jpg",
+  },
+  {
+    id: 4,
+    nama: "Ari Attala",
+    nim: "3130024003",
+    foto: "asset/staff/psdm/ari.jpg",
+  },
+];
+
+export const staffPendidikan = [
+  {
+    id: 1,
+    nama: "Irsyad Prasista Ramadhani",
+    nim: "",
+    foto: "asset/staff/icad.jpg",
+    warna: "hijau",
+  },
+  {
+    id: 2,
+    nama: "Nur Ika Nuzulul Fuhasari",
+    nim: "",
+    foto: "asset/staff/ika.jpg",
+    warna: "hijau",
+  },
+  {
+    id: 3,
+    nama: "Haffina Salsabila",
+    nim: "",
+    foto: "asset/staff/fina.jpg",
+    warna: "hijau",
+  },
+  {
+    id: 4,
+    nama: "Muchammad Hussan",
+    nim: "",
+    foto: "asset/staff/husan.jpg",
+    warna: "hijau",
+  },
+];
+
+export const staffPengmas = [
+  {
+    id: 1,
+    nama: "Lutfia Khoirunisa",
+    nim: "",
+    foto: "asset/staff/lutfia.jpg",
+    warna: "hijau",
+  },
+  {
+    id: 2,
+    nama: "Vina Niswatul Fitria",
+    nim: "",
+    foto: "asset/staff/fitri.jpg",
+    warna: "hijau",
+  },
+  {
+    id: 3,
+    nama: "Azzahrah Nadine Syahdhani",
+    nim: "",
+    foto: "asset/staff/nadine.jpg",
+    warna: "hijau",
+  },
+  {
+    id: 4,
+    nama: "Reni Artika Sari",
+    nim: "",
+    foto: "asset/staff/reni.jpg",
+    warna: "hijau",
+  },
+];
+
+export const staffInovation = [
+  {
+    id: 1,
+    nama: "Ferdian Tri Rahmansyah",
+    nim: "",
+    foto: "asset/staff/ferdi.jpg",
+  },
+  {
+    id: 2,
+    nama: "Baihaqi Mustofa",
+    nim: "",
+    foto: "asset/staff/baihaqi.jpg",
+  },
+  {
+    id: 3,
+    nama: "Lutfillah",
+    nim: "",
+    foto: "asset/staff/lutfi.jpg",
   },
 ];

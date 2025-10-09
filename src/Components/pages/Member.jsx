@@ -2,13 +2,13 @@ import React, { useRef } from "react";
 import Navbar from "../UI/Navbar";
 import Footer from "../UI/Footer";
 import { SliderMember } from "../UI/SliderMember";
-import {
-  cyberBelajar,
-  cyberBerbagi,
-  cyberEvent,
-  cyberMengajar,
-} from "../../assets/dataMember";
 import { kadiv } from "../../assets/assets";
+import {
+  staffPsdm,
+  staffPendidikan,
+  staffPengmas,
+  staffInovation,
+} from "../../assets/assets";
 
 const Member = () => {
   const ref = useRef(null);
@@ -92,334 +92,55 @@ const Member = () => {
         </div>
       </section>
 
-      {/* List Of Member */}
-      <section className="bg-secbg">
-        <div className="bg-secbg mt-28 " ref={ref}>
-          <h2 className="text-center font-bold text-2xl lg:text-4xl text-yel pt-8 lg:pt-16">
-            Semua Anggota
-          </h2>
-
-          <div className="mt-11 flex flex-wrap justify-around text-center  lg:pt-4 lg:px-32">
-            <div className="contaniner mb-4 lg:mb-16 flex-row justify-center items-center">
-              <img
-                src="/asset/member/wava.jpg"
-                alt="kadiv"
-                className="rounded-3xl w-20 lg:w-44 mx-4 border border-secbg shadow-md"
-              />
-              <div className="bar md:p-1 lg:p-2 mt-4 m-auto w-4/5   bg-primary justify-center text-white lg:rounded-t-3xl max-md:rounded-t-2xl md:rounded-t-2xl max-sm:rounded-t-2xl">
-                <h4 className=" text-md lg:text-xl font-bold text-center">
-                  Wava
-                </h4>
-                <p className="text-sm lg:text-lg font-semibold text-center">
-                  3130022043
-                </p>
-              </div>
-            </div>
-            <div className="contaniner mb-4 lg:mb-16 flex-row justify-center items-center">
-              <img
-                src="/asset/member/ainin.jpg"
-                alt="kadiv"
-                className="rounded-3xl w-20 lg:w-44 mx-4 border border-secbg shadow-md"
-              />
-              <div className="bar md:p-1 lg:p-2 mt-4 m-auto w-4/5   bg-primary justify-center text-white lg:rounded-t-3xl max-md:rounded-t-2xl md:rounded-t-2xl max-sm:rounded-t-2xl">
-                <h4 className=" text-md lg:text-xl font-bold text-center">
-                  Ainin
-                </h4>
-                <p className="text-sm lg:text-lg font-semibold text-center">
-                  3130021001
-                </p>
-              </div>
-            </div>
-            <div className="contaniner mb-4 lg:mb-16 flex-row justify-center items-center">
-              <img
-                src="/asset/member/fatur.jpg"
-                alt="kadiv"
-                className="rounded-3xl w-20 lg:w-44 mx-4 border border-secbg shadow-md"
-              />
-              <div className="bar md:p-1 lg:p-2 mt-4 m-auto w-4/5   bg-primary justify-center text-white lg:rounded-t-3xl max-md:rounded-t-2xl md:rounded-t-2xl max-sm:rounded-t-2xl">
-                <h4 className=" text-md lg:text-xl font-bold text-center">
-                  Fatkhur
-                </h4>
-                <p className="text-sm lg:text-lg font-semibold text-center">
-                  3130021003
-                </p>
-              </div>
-            </div>
-
-            <div className="contaniner mb-4 lg:mb-16 flex-row justify-center items-center">
-              <img
-                src="/asset/member/chelsy.jpg"
-                alt="kadiv"
-                className="rounded-3xl w-20 lg:w-44 mx-4 border border-secbg shadow-md"
-              />
-              <div className="bar md:p-1 lg:p-2 mt-4 m-auto w-4/5   bg-primary justify-center text-white lg:rounded-t-3xl max-md:rounded-t-2xl md:rounded-t-2xl max-sm:rounded-t-2xl">
-                <h4 className=" text-md lg:text-xl font-bold text-center">
-                  Chelsy
-                </h4>
-                <p className="text-sm lg:text-lg font-semibold text-center">
-                  3130021028
-                </p>
-              </div>
-            </div>
-            <div className="contaniner mb-4 lg:mb-16 flex-row justify-center items-center">
-              <img
-                src="/asset/member/rio.jpg"
-                alt="kadiv"
-                className="rounded-3xl w-20 lg:w-44 mx-4 border border-secbg shadow-md"
-              />
-              <div className="bar md:p-1 lg:p-2 mt-4 m-auto w-4/5   bg-primary justify-center text-white lg:rounded-t-3xl max-md:rounded-t-2xl md:rounded-t-2xl max-sm:rounded-t-2xl">
-                <h4 className=" text-md lg:text-xl font-bold text-center">
-                  Rio
-                </h4>
-                <p className="text-sm lg:text-lg font-semibold text-center">
-                  3130021011
-                </p>
-              </div>
-            </div>
-            <div className="contaniner mb-4 lg:mb-16 flex-row justify-center items-center">
-              <img
-                src="/asset/member/lutfiah.jpg"
-                alt="kadiv"
-                className="rounded-3xl w-20 lg:w-44 mx-4 border border-secbg shadow-md"
-              />
-              <div className="bar md:p-1 lg:p-2 mt-4 m-auto w-4/5   bg-primary justify-center text-white lg:rounded-t-3xl max-md:rounded-t-2xl md:rounded-t-2xl max-sm:rounded-t-2xl">
-                <h4 className=" text-md lg:text-xl font-bold text-center">
-                  Lutfiah
-                </h4>
-                <p className="text-sm lg:text-lg font-semibold text-center">
-                  3130021009
-                </p>
-              </div>
-            </div>
-            <div className="contaniner mb-4 lg:mb-16 flex-row justify-center items-center">
-              <img
-                src="/asset/member/obit.jpg"
-                alt="kadiv"
-                className="rounded-3xl w-20 lg:w-44 mx-4 border border-secbg shadow-md"
-              />
-              <div className="bar md:p-1 lg:p-2 mt-4 m-auto w-4/5   bg-primary justify-center text-white lg:rounded-t-3xl max-md:rounded-t-2xl md:rounded-t-2xl max-sm:rounded-t-2xl">
-                <h4 className=" text-md lg:text-xl font-bold text-center">
-                  Robit
-                </h4>
-                <p className="text-sm lg:text-lg font-semibold text-center">
-                  3130022044
-                </p>
-              </div>
-            </div>
-            <div className="contaniner mb-4 lg:mb-16 flex-row justify-center items-center">
-              <img
-                src="/asset/member/ifa.jpg"
-                alt="kadiv"
-                className="rounded-3xl w-20 lg:w-44 mx-4 border border-secbg shadow-md"
-              />
-              <div className="bar md:p-1 lg:p-2 mt-4 m-auto w-4/5   bg-primary justify-center text-white lg:rounded-t-3xl max-md:rounded-t-2xl md:rounded-t-2xl max-sm:rounded-t-2xl">
-                <h4 className=" text-md lg:text-xl font-bold text-center">
-                  Ifa
-                </h4>
-                <p className="text-sm lg:text-lg font-semibold text-center">
-                  3130021010
-                </p>
-              </div>
-            </div>
-            <div className="contaniner mb-4 lg:mb-16 flex-row justify-center items-center">
-              <img
-                src="/asset/member/3130022035_ilham.jpg"
-                alt="kadiv"
-                className="rounded-3xl w-20 lg:w-44 mx-4 border border-secbg shadow-md"
-              />
-              <div className="bar md:p-1 lg:p-2 mt-4 m-auto w-4/5   bg-primary justify-center text-white lg:rounded-t-3xl max-md:rounded-t-2xl md:rounded-t-2xl max-sm:rounded-t-2xl">
-                <h4 className=" text-md lg:text-xl font-bold text-center">
-                  Ilham
-                </h4>
-                <p className="text-sm lg:text-lg font-semibold text-center">
-                  3130022035
-                </p>
-              </div>
-            </div>
-            <div className="contaniner mb-4 lg:mb-16 flex-row justify-center items-center">
-              <img
-                src="/asset/member/citra_4330022014.jpg"
-                alt="kadiv"
-                className="rounded-3xl w-20 lg:w-44 mx-4 border border-secbg shadow-md"
-              />
-              <div className="bar md:p-1 lg:p-2 mt-4 m-auto w-4/5   bg-primary justify-center text-white lg:rounded-t-3xl max-md:rounded-t-2xl md:rounded-t-2xl max-sm:rounded-t-2xl">
-                <h4 className=" text-md lg:text-xl font-bold text-center">
-                  Citra
-                </h4>
-                <p className="text-sm lg:text-lg font-semibold text-center">
-                  4330022014
-                </p>
-              </div>
-            </div>
-            <div className="contaniner mb-4 lg:mb-16 flex-row justify-center items-center">
-              <img
-                src="/asset/member/3130021060_farhan.jpg"
-                alt="kadiv"
-                className="rounded-3xl w-20 lg:w-44 mx-4 border border-secbg shadow-md"
-              />
-              <div className="bar md:p-1 lg:p-2 mt-4 m-auto w-4/5   bg-primary justify-center text-white lg:rounded-t-3xl max-md:rounded-t-2xl md:rounded-t-2xl max-sm:rounded-t-2xl">
-                <h4 className=" text-md lg:text-xl font-bold text-center">
-                  Febrian
-                </h4>
-                <p className="text-sm lg:text-lg font-semibold text-center">
-                  3130021060
-                </p>
-              </div>
-            </div>
-            <div className="contaniner mb-4 lg:mb-16 flex-row justify-center items-center">
-              <img
-                src="/asset/member/fira_4330022016.jpg"
-                alt="kadiv"
-                className="rounded-3xl w-20 lg:w-44 mx-4 border border-secbg shadow-md"
-              />
-              <div className="bar md:p-1 lg:p-2 mt-4 m-auto w-4/5   bg-primary justify-center text-white lg:rounded-t-3xl max-md:rounded-t-2xl md:rounded-t-2xl max-sm:rounded-t-2xl">
-                <h4 className=" text-md lg:text-xl font-bold text-center">
-                  Fira
-                </h4>
-                <p className="text-sm lg:text-lg font-semibold text-center">
-                  4330022016
-                </p>
-              </div>
-            </div>
-            <div className="contaniner mb-4 lg:mb-16 flex-row justify-center items-center">
-              <img
-                src="/asset/member/dhava_4330022011.jpg"
-                alt="kadiv"
-                className="rounded-3xl w-20 lg:w-44 mx-4 border border-secbg shadow-md"
-              />
-              <div className="bar md:p-1 lg:p-2 mt-4 m-auto w-4/5   bg-primary justify-center text-white lg:rounded-t-3xl max-md:rounded-t-2xl md:rounded-t-2xl max-sm:rounded-t-2xl">
-                <h4 className=" text-md lg:text-xl font-bold text-center">
-                  Dhava
-                </h4>
-                <p className="text-sm lg:text-lg font-semibold text-center">
-                  4330022011
-                </p>
-              </div>
-            </div>
-            <div className="contaniner mb-4 lg:mb-16 flex-row justify-center items-center">
-              <img
-                src="/asset/member/farhan.jpg"
-                alt="kadiv"
-                className="rounded-3xl w-20 lg:w-44 mx-4 border border-secbg shadow-md"
-              />
-              <div className="bar md:p-1 lg:p-2 mt-4 m-auto w-4/5   bg-primary justify-center text-white lg:rounded-t-3xl max-md:rounded-t-2xl md:rounded-t-2xl max-sm:rounded-t-2xl">
-                <h4 className=" text-md lg:text-xl font-bold text-center">
-                  Farhan
-                </h4>
-                <p className="text-sm lg:text-lg font-semibold text-center">
-                  3130022022
-                </p>
-              </div>
-            </div>
-            <div className="contaniner mb-4 lg:mb-16 flex-row justify-center items-center">
-              <img
-                src="/asset/member/hasib.jpg"
-                alt="kadiv"
-                className="rounded-3xl w-20 lg:w-44 mx-4 border border-secbg shadow-md"
-              />
-              <div className="bar md:p-1 lg:p-2 mt-4 m-auto w-4/5   bg-primary justify-center text-white lg:rounded-t-3xl max-md:rounded-t-2xl md:rounded-t-2xl max-sm:rounded-t-2xl">
-                <h4 className=" text-md lg:text-xl font-bold text-center">
-                  Hasib
-                </h4>
-                <p className="text-sm lg:text-lg font-semibold text-center">
-                  3130022002
-                </p>
-              </div>
-            </div>
-            <div className="contaniner mb-4 lg:mb-16 flex-row justify-center items-center">
-              <img
-                src="/asset/member/alifian.jpg"
-                alt="kadiv"
-                className="rounded-3xl w-20 lg:w-44 mx-4 border border-secbg shadow-md"
-              />
-              <div className="bar md:p-1 lg:p-2 mt-4 m-auto w-4/5   bg-primary justify-center text-white lg:rounded-t-3xl max-md:rounded-t-2xl md:rounded-t-2xl max-sm:rounded-t-2xl">
-                <h4 className=" text-md lg:text-xl font-bold text-center">
-                  Alifian
-                </h4>
-                <p className="text-sm lg:text-lg font-semibold text-center">
-                  3130022024
-                </p>
-              </div>
-            </div>
-            <div className="contaniner mb-4 lg:mb-16 flex-row justify-center items-center">
-              <img
-                src="/asset/member/andika.jpg"
-                alt="kadiv"
-                className="rounded-3xl w-20 lg:w-44 mx-4 border border-secbg shadow-md"
-              />
-              <div className="bar md:p-1 lg:p-2 mt-4 m-auto w-4/5   bg-primary justify-center text-white lg:rounded-t-3xl max-md:rounded-t-2xl md:rounded-t-2xl max-sm:rounded-t-2xl">
-                <h4 className=" text-md lg:text-xl font-bold text-center">
-                  Andika
-                </h4>
-                <p className="text-sm lg:text-lg font-semibold text-center">
-                  3130022036
-                </p>
-              </div>
-            </div>
-            <div className="contaniner mb-4 lg:mb-16 flex-row justify-center items-center">
-              <img
-                src="/asset/member/halili_3130022042.jpg"
-                alt="kadiv"
-                className="rounded-3xl w-20 lg:w-44 mx-4 border border-secbg shadow-md"
-              />
-              <div className="bar md:p-1 lg:p-2 mt-4 m-auto w-4/5   bg-primary justify-center text-white lg:rounded-t-3xl max-md:rounded-t-2xl md:rounded-t-2xl max-sm:rounded-t-2xl">
-                <h4 className=" text-md lg:text-xl font-bold text-center">
-                  Halili
-                </h4>
-                <p className="text-sm lg:text-lg font-semibold text-center">
-                  3130022042
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/**List Divisi */}
-      <section id="divisi1" className="mt-28">
-        <div className="container flex flex-wrap lg:m-auto">
+      <section id="divisi1" className="mt-28 mx-2 sm:mx-4 md:mx-8 lg:mx-10">
+        <h2 className="text-center font-bold text-2xl lg:text-4xl text-yel pb-10 sm:pb-12 lg:pb-16">
+          Staff Devisi
+        </h2>
+        <div className="container flex flex-col lg:flex-row gap-4 pb-8 lg:pb-10 lg:m-auto">
           <div
-            id="cyber-belajar"
-            className=" p-3 bg-primary sm:basis-full lg:basis-2/4 md:basis-full text-center rounded-r-2xl"
+            id="staff-psdm"
+            className="border p-3 bg-primary w-full lg:w-1/2 text-center rounded-2xl"
           >
-            <h1 className="text-white lg:text-2xl font-bold text-center">
-              CYBER BELAJAR
+            <h1 className="text-white text-xl lg:text-2xl font-bold text-center mb-4">
+              Staff PSDM
             </h1>
-            {/** */}
-            {SliderMember(cyberBelajar)}
+            {SliderMember(staffPsdm)}
           </div>
           <div
-            id="cyber-mengajar"
-            className=" p-3 sm:basis-full lg:basis-1/2 md: basis-full text-center "
+            id="staff-pendidikan"
+            className="border p-3 w-full lg:w-1/2 text-center rounded-2xl"
           >
-            <h1 className="text-primary lg:text-2xl font-bold text-center">
-              CYBER MENGAJAR
+            <h1 className="text-primary text-xl lg:text-2xl font-bold text-center mb-4">
+              Staff Pendidikan
             </h1>
-            {SliderMember(cyberMengajar)}
+            {SliderMember(staffPendidikan)}
           </div>
         </div>
       </section>
 
-      <section id="divisi2" className="lg:mb-32">
-        <div className="container flex  flex-wrap-reverse lg:m-auto">
+      <section
+        id="divisi2"
+        className="mb-20 lg:mb-32 mx-2 sm:mx-4 md:mx-8 lg:mx-10"
+      >
+        <div className="container flex flex-col-reverse lg:flex-row gap-4 lg:m-auto">
           <div
-            id="cyber-belajar"
-            className=" p-3 bg-white sm:basis-full lg:basis-1/2 text-center rounded-r-3xl"
+            id="staff-pengmas"
+            className="border p-3 bg-white w-full lg:w-1/2 text-center rounded-2xl"
           >
-            <h1 className="text-primary lg:text-2xl font-bold text-center">
-              CYBER BERBAGI
+            <h1 className="text-primary text-xl lg:text-2xl font-bold text-center mb-4">
+              Staff Pengmas
             </h1>
-            {/** */}
-            {SliderMember(cyberBerbagi)}
+            {SliderMember(staffPengmas)}
           </div>
           <div
-            id="cyber-mengajar"
-            className=" p-3 bg-primary sm:basis-full lg:basis-1/2 text-center rounded-l-2xl"
+            id="staff-inovation"
+            className="border p-3 bg-primary w-full lg:w-1/2 text-center rounded-2xl"
           >
-            <h1 className="text-white lg:text-2xl font-bold text-center">
-              CYBER EVENT
+            <h1 className="text-white text-xl lg:text-2xl font-bold text-center mb-4">
+              Staff Innovation & Entrepreneur
             </h1>
-            {SliderMember(cyberEvent)}
+            {SliderMember(staffInovation)}
           </div>
         </div>
       </section>

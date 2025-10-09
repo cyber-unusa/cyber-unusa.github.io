@@ -9,36 +9,27 @@ export const SliderMember = (data) => {
     dots: true,
     infinite: true,
     speed: 500,
-    slidesToShow: 4,
+    slidesToShow: 1,
     slidesToScroll: 1,
   };
   return (
     <div className="container grid grid-cols-1 gap-3 p-4">
       <Slider {...sliderSettings}>
-        {data.map((belajar, index) => {
+        {data.map((item, index) => {
           return (
             <>
               <div key={index} className="membersz mx-3 mt-4 text-center">
-                <div className="lg:h-60 drop-shadow-lg">
-                  {mockUp(belajar.foto)}
+                <div className="lg:h-60  drop-shadow-lg sm:px-10">
+                  {mockUp(item.foto)}
                 </div>
                 <p
                   className={
-                    belajar.warna === "hijau"
+                    item.warna === "hijau"
                       ? "font-medium  text-xl text-primary"
                       : "font-medium  text-xl text-white"
                   }
                 >
-                  {belajar.name}
-                </p>
-                <p
-                  className={
-                    belajar.warna === "hijau"
-                      ? "font-medium italic text-xl text-primary"
-                      : "font-medium italic text-xl text-white"
-                  }
-                >
-                  {/* {belajar.jabatan} */}
+                  {item.nama}
                 </p>
               </div>
             </>

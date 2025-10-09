@@ -6,6 +6,7 @@ import cookieParser from "cookie-parser";
 import connectDB from "./config/mongodb.js";
 import authRoter from "./routes/authRoutes.js";
 import userRouter from "./routes/userRoutes.js";
+import dashboardRouter from "./routes/dasboardRoutes.js";
 
 const app = express();
 const port = process.env.PORT || 4000;
@@ -29,6 +30,7 @@ app.get("/", (req, res) =>
 );
 app.use("/api/auth", authRoter);
 app.use("/api/user", userRouter);
+app.use('/dashboard', dashboardRouter)
 
 if (process.env.NODE_ENV !== "production") {
   app.listen(port, () => console.log(`Server Started on PORT: ${port}`));
