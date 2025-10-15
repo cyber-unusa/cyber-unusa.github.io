@@ -32,7 +32,8 @@ export const AppContextProvider = ({ children }) => {
       if (data.success) {
         setUserData(data.userData);
       } else {
-        toast.error(data.message + data.userId);
+        // don't concatenate possible undefined fields — show the server message only
+        toast.error(data.message);
       }
     } catch (error) {
       toast.error(error.message);
