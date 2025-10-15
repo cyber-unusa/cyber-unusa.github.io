@@ -14,7 +14,7 @@ export default function ResetPassword() {
   const [email, setEmail] = useState("");
   const [newPassword, setNewPassword] = useState("");
   const [isEmailSend, setIsEmailSend] = useState("");
-  const [otp, setOtp] = useState(0);
+  const [otp] = useState(0);
   const [isOtpSubmit, setIsOtpSubmit] = useState(false);
 
   const inputRefs = React.useRef([]);

@@ -1,6 +1,6 @@
 // import { useNavigate } from "react-router-dom";
 // import { useRef } from "react";
-import { bph, kadiv } from "../../assets/assets";
+import { bph } from "../../assets/assets";
 
 // Card for BPH (Badan Pengurus Harian)
 function BphCard({ foto, nama, jabatan, color }) {

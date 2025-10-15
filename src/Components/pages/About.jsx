@@ -1,6 +1,6 @@
 import Footer from "../UI/Footer";
 import Navbar from "../UI/Navbar";
-import { Dot, Star } from "lucide-react";
+import { Dot } from "lucide-react";
 
 export const About = () => {
   return (
