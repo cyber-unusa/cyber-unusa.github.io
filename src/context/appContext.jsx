@@ -9,7 +9,7 @@ export const AppContextProvider = ({ children }) => {
 
   const backendUrl =
     process.env.REACT_APP_BACKEND_URL ||
-    "https://server-cyber-unusa-github-3xe542jca-cyber-unusas-projects.vercel.app";
+    "https://server-cyber-unusa-github-io-git-main-cyber-unusas-projects.vercel.app";
   const [isLoggedin, setIsLoggedin] = useState(false);
   const [userData, setUserData] = useState(false);
 
@@ -32,7 +32,6 @@ export const AppContextProvider = ({ children }) => {
       if (data.success) {
         setUserData(data.userData);
       } else {
-        // don't concatenate possible undefined fields — show the server message only
         toast.error(data.message);
       }
     } catch (error) {

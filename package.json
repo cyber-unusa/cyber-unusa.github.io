@@ -3,6 +3,7 @@
   "name": "webcyber",
   "version": "0.1.0",
   "private": true,
+  "proxy": "https://server-cyber-unusa-github-io-git-main-cyber-unusas-projects.vercel.app",
   "dependencies": {
     "@babel/plugin-transform-private-property-in-object": "^7.27.1",
     "@eslint/config-array": "^0.21.0",
