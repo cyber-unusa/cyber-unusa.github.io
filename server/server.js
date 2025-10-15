@@ -25,7 +25,25 @@ const allowedOrigins = [
 
 app.use(express.json());
 app.use(cookieParser());
-app.use(cors({ origin: allowedOrigins, credentials: true }));
+
+// Use dynamic origin function so Access-Control-Allow-Origin echoes the request origin
+// (required when sending cookies across origins). Only allow origins in allowedOrigins.
+app.use(
+  cors({
+    origin: function (origin, callback) {
+      // allow requests with no origin (like curl or server-to-server)
+      if (!origin) return callback(null, true);
+      if (allowedOrigins.indexOf(origin) !== -1) {
+        return callback(null, true);
+      }
+      return callback(
+        new Error("CORS policy: This origin is not allowed."),
+        false
+      );
+    },
+    credentials: true,
+  })
+);
 app.use(express.static(path.join(__dirname, "public")));
 
 //* API Endpoints
