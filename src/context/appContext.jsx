@@ -7,9 +7,8 @@ export const AppContext = createContext();
 export const AppContextProvider = ({ children }) => {
   axios.defaults.withCredentials = true;
 
-  const backendUrl =
-    process.env.REACT_APP_BACKEND_URL ||
-    "https://server-cyber-unusa-github-io-git-main-cyber-unusas-projects.vercel.app";
+  // Use environment override in production; default to empty string so dev requests are relative
+  const backendUrl = process.env.REACT_APP_BACKEND_URL || "";
   const [isLoggedin, setIsLoggedin] = useState(false);
   const [userData, setUserData] = useState(false);
 
