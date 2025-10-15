@@ -6,10 +6,16 @@ import cookieParser from "cookie-parser";
 import connectDB from "./config/mongodb.js";
 import authRoter from "./routes/authRoutes.js";
 import userRouter from "./routes/userRoutes.js";
-import dashboardRouter from "./routes/dasboardRoutes.js";
+import dokumenterRouter from "./routes/dokumenterRoutes.js";
+import kegiatanRouter from "./routes/kegiatanRoutes.js";
+
+import path from "path";
+import { fileURLToPath } from "url";
 
 const app = express();
 const port = process.env.PORT || 4000;
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 connectDB();
 
 const allowedOrigins = [
@@ -20,6 +26,7 @@ const allowedOrigins = [
 app.use(express.json());
 app.use(cookieParser());
 app.use(cors({ origin: allowedOrigins, credentials: true }));
+app.use(express.static(path.join(__dirname, "public")));
 
 //* API Endpoints
 app.get("/", (req, res) =>
@@ -30,7 +37,8 @@ app.get("/", (req, res) =>
 );
 app.use("/api/auth", authRoter);
 app.use("/api/user", userRouter);
-app.use('/dashboard', dashboardRouter)
+app.use("/api/dokumenter", dokumenterRouter);
+app.use("/api/kegiatan", kegiatanRouter);
 
 if (process.env.NODE_ENV !== "production") {
   app.listen(port, () => console.log(`Server Started on PORT: ${port}`));

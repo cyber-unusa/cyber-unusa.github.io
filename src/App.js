@@ -9,6 +9,7 @@ import CoomingSoon from "./Components/UI/CoomingSoon";
 import { ToastContainer } from "react-toastify";
 import { AppContextProvider } from "./context/appContext.jsx";
 import ResetPassword from "./Components/pages/ResetPassword.jsx";
+import Dashboard from "./Components/pages/Dashboard.jsx";
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/reset-password" element={<ResetPassword />} />
           <Route path="/cyber-mart" element={<CyberMart />} />
+          <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/cooming" element={<CoomingSoon />} />
         </Routes>
       </AppContextProvider>

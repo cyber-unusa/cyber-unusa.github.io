@@ -3,7 +3,7 @@ import Footer from "../UI/Footer";
 import Dokumenter from "../UI/Dokumenter";
 import HeroSection from "../UI/HeroSection";
 import Pengurus from "../UI/Pengurus";
-import Event from "../UI/Event";
+import Event from "../UI/Kegiatan";
 
 const Home = () => {
   return (

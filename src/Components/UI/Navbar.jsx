@@ -226,14 +226,16 @@ export default function Navbar() {
                         Logout
                       </button>
                     </li>
-                    <li>
-                      <button
-                        onClick={() => navigate("/dashboard")}
-                        className="block px-4 py-2 text-sm hover:bg-gray-600 text-gray-200 hover:text-white"
-                      >
-                        Dashboard
-                      </button>
-                    </li>
+                    {userData && userData.role === "admin" && (
+                      <li>
+                        <button
+                          onClick={() => navigate("/dashboard")}
+                          className="block px-4 py-2 text-sm hover:bg-gray-600 text-gray-200 hover:text-white"
+                        >
+                          Dashboard
+                        </button>
+                      </li>
+                    )}
                   </ul>
                 </div>
               )}
