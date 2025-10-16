@@ -13,8 +13,8 @@ import Dashboard from "./Components/pages/Dashboard.jsx";
 
 function App() {
   return (
-    <div className="App">
-      <AppContextProvider>
+    <AppContextProvider>
+      <div className="App">
         <ToastContainer />
         <Routes>
           <Route path="/" element={<Home />} />
@@ -26,8 +26,8 @@ function App() {
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/cooming" element={<CoomingSoon />} />
         </Routes>
-      </AppContextProvider>
-    </div>
+      </div>
+    </AppContextProvider>
   );
 }
 

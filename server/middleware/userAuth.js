@@ -4,7 +4,7 @@ const userAuth = async (req, res, next) => {
   const { token } = req.cookies;
 
   if (!token) {
-    return res.status(401).json({
+    return res.json({
       success: false,
       message: "Not Authorized. Login lagi broo",
     });
@@ -16,7 +16,7 @@ const userAuth = async (req, res, next) => {
     if (tokenDecode.id) {
       req.userId = tokenDecode.id;
     } else {
-      return res.status(401).json({
+      return res.json({
         success: false,
         message: "Not Authorized. Login lagi broo",
       });
@@ -24,10 +24,7 @@ const userAuth = async (req, res, next) => {
 
     next();
   } catch (error) {
-    // Token verification failed or other auth error
-    return res
-      .status(401)
-      .json({ success: false, message: "Not Authorized. Login lagi broo" });
+    res.json({ success: false, message: error.message });
   }
 };
 
