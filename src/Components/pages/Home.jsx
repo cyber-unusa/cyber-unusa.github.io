@@ -4,8 +4,16 @@ import Dokumenter from "../UI/Dokumenter";
 import HeroSection from "../UI/HeroSection";
 import Pengurus from "../UI/Pengurus";
 import Event from "../UI/Kegiatan";
+import { useNavigate } from "react-router-dom";
+import { useEffect } from "react";
 
 const Home = () => {
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    window.location.href = "https://cyber-unusa.netlify.app";
+  });
+
   return (
     <div>
       <Navbar />

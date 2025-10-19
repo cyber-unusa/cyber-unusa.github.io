@@ -41,8 +41,8 @@ app.use("/api/user", userRouter);
 app.use("/api/dokumenter", dokumenterRouter);
 app.use("/api/kegiatan", kegiatanRouter);
 
-// if (process.env.NODE_ENV !== "production") {
-//   app.listen(port, () => console.log(`Server Started on PORT: ${port}`));
-// }
+if (process.env.NODE_ENV !== "production") {
+  app.listen(port, () => console.log(`Server Started on PORT: ${port}`));
+}
 
 export default app;
